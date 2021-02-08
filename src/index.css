@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@font-face {
+    font-family: vcr-osd-mono;
+    src: url(./fonts/vcr-osd-mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Saol Display Regular';
+    src: url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot');
+    src: url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot?#iefix') format('embedded-opentype'),
+        url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff2') format('woff2'),
+        url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff') format('woff'),
+        url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.ttf') format('truetype'),
+        url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.svg#Saol Display Regular') format('svg');
+}
+
+.font-aktiv-grotesk {
+    font-family: 'aktiv-grotesk-std', sans-serif;
+}
+
+.font-vcr-osd-mono {
+    font-family: 'vcr-osd-mono', sans-serif;
+}
+
+.font-saol-display {
+    font-family: 'Saol Display Regular', 'sans-serif';
+}

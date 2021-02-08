@@ -1,0 +1,91 @@
+$bg-color: #faf2e9;
+
+.Dream-page {
+}
+
+.Dream-page-title-container {
+    height: 1200px;
+    background-color: lightblue;
+}
+
+.Dream-page-boarding-gates-container {
+    position: relative;
+    background-color: $bg-color;
+
+    .Dream-page-boarding-gates-title {
+        position: absolute;
+        left: 100px;
+        top: -122px;
+        font-size: 148px;
+    }
+}
+
+.Dream-page-title {
+    position: absolute;
+    font-size: 148px;
+    letter-spacing: 3.26px;
+    height: 40%;
+    width: 100%;
+    top: 470px;
+
+    .Dream-page-title-1 {
+        position: relative;
+        left: 100px;
+    }
+    .Dream-page-title-2 {
+        position: relative;
+        top: -60px;
+        left: 600px;
+    }
+}
+
+.Dream-page-departures {
+    position: absolute;
+    width: 427px;
+    height: 73px;
+    background-color: purple;
+    left: 100px;
+    top: 680px;
+}
+
+.Dream-page-book-flight {
+    position: absolute;
+    width: 325px;
+    height: 425px;
+    background-color: red;
+    opacity: 50%;
+    left: 1245px;
+    top: 175px;
+}
+
+.Dream-page-text-section-1 {
+    position: absolute;
+    background-color: green;
+    opacity: 50%;
+    width: 555px;
+    left: 370px;
+    top: 100px;
+
+    .Dream-page-text-section-1-title {
+        position: relative;
+        font-size: 60px;
+    }
+
+    .Dream-page-text-section-1-description {
+        position: relative;
+        margin-top: 10px;
+    }
+}
+
+.Dream-page-text-section-2 {
+    position: absolute;
+    background-color: blue;
+    opacity: 50%;
+    width: 545px;
+    top: 950px;
+    left: 600px;
+}
+
+.Dream-page-font-medium {
+    font-size: 18px;
+}

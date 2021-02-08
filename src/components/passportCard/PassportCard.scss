@@ -1,0 +1,68 @@
+$base-color: #faf2e9;
+$card-color: #536c28;
+
+.Passport-card {
+    width: 295px;
+    height: 435px;
+    border-radius: 5px;
+    background-color: $card-color;
+    box-shadow: 0px 3px 6px #c3ccb6;
+    padding: 20px 30px;
+    color: $base-color;
+}
+
+.Passport-card-top-half {
+    display: flex;
+    flex-direction: row;
+}
+
+.Passport-card-top-half-right {
+    margin-left: 20px;
+}
+
+.Passport-card-description-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.Passport-card-description-title-heading {
+    background-color: $base-color;
+    color: $card-color;
+    padding: 1px 2px;
+}
+
+.Passport-card-description {
+    margin-top: 20px;
+}
+
+.Passport-card-section-text {
+    margin-top: 25px;
+}
+
+.Passport-card-font-xsmall {
+    font-size: 10px;
+}
+
+.Passport-card-font-small {
+    font-size: 15px;
+}
+
+.Passport-card-font-medium {
+    font-size: 18px;
+}
+
+.Passport-card-font-medium-plus {
+    font-size: 20px;
+}
+
+.Passport-card-font-large {
+    font-size: 98px;
+}
+
+.qr-code {
+    width: 87px;
+    height: 87px;
+    background-color: $base-color;
+}

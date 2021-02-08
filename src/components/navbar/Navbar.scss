@@ -1,0 +1,16 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color: #faf2e9;
+
+    font-family: 'aktiv-grotesk-std', sans-serif;
+}
+
+.Navbar-items {
+    display: flex;
+    flex-direction: row;
+}
