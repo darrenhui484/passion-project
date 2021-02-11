@@ -1,6 +1,24 @@
 $bg-color: #faf2e9;
 $bg-color-top: #fffcf5;
 
+@mixin card-hover-animation($shadow-color) {
+    $timing: 300ms;
+
+    transition: box-shadow $timing;
+
+    & > * {
+        transition: transform $timing;
+    }
+
+    &:hover {
+        box-shadow: 10px 10px $shadow-color;
+
+        & > * {
+            transform: translate(5px);
+        }
+    }
+}
+
 .Dream-page {
 }
 
@@ -19,6 +37,59 @@ $bg-color-top: #fffcf5;
         left: 100px;
         top: -122px;
         font-size: 148px;
+    }
+
+    .Dream-page-boarding-gates-view-gates-btn-container {
+        display: flex;
+        justify-content: flex-end;
+
+        $timing: 200ms;
+
+        .Dream-page-boarding-gates-view-gates-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            margin-right: 100px;
+
+            &:hover {
+                .Dream-page-boarding-gates-view-gates-btn-text {
+                    &::before {
+                        transform: scaleX(1);
+                    }
+                }
+
+                .Dream-page-boarding-gates-view-gates-btn-arrow {
+                    transform: translateX(10px);
+                }
+            }
+
+            .Dream-page-boarding-gates-view-gates-btn-text {
+                position: relative;
+                display: inline-block;
+                font-size: 23px;
+                font-weight: bold;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    width: 100%;
+                    height: 2px;
+                    transform: scaleX(0);
+                    margin: 5px 0 0;
+                    transition: transform $timing;
+                    background-color: black;
+                    transform-origin: bottom left;
+                }
+            }
+
+            .Dream-page-boarding-gates-view-gates-btn-arrow {
+                margin-left: 50px;
+
+                transition: transform $timing;
+            }
+        }
     }
 }
 
@@ -51,6 +122,8 @@ $bg-color-top: #fffcf5;
     color: $color;
     padding: 10px;
 
+    @include card-hover-animation($color);
+
     .Dream-page-departures-text {
         font-size: 45px;
         font-weight: bold;
@@ -70,6 +143,8 @@ $bg-color-top: #fffcf5;
     border: $color 3px solid;
     color: $color;
     padding: 20px;
+
+    @include card-hover-animation($color);
 
     .Dream-page-book-flight-icon {
     }

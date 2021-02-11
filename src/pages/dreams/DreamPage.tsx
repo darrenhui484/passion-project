@@ -107,6 +107,13 @@ function DreamPage(): ReactElement {
             </div>
             <div className="Dream-page-boarding-gates-container">
                 <div className="Dream-page-boarding-gates-title font-saol-display">Boarding Gates</div>
+                <div className="Dream-page-boarding-gates-view-gates-btn-container">
+                    <div className="Dream-page-boarding-gates-view-gates-btn">
+                        <div className="Dream-page-boarding-gates-view-gates-btn-text">VIEW ALL GATES</div>
+                        <div className="Dream-page-boarding-gates-view-gates-btn-arrow">A</div>
+                    </div>
+                </div>
+
                 <PassportCardSlider passportCardPropsList={generateDummyData()} />
             </div>
         </div>
