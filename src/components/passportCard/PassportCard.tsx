@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { IPassportCardProps } from './IPassportCardProps';
 import './PassportCard.scss';
+import { QRCode } from 'react-qr-svg';
 
 export function PassportCard({
     countryFrom,
@@ -9,12 +10,13 @@ export function PassportCard({
     seat,
     title,
     description,
+    qrCodeValue,
 }: IPassportCardProps): ReactElement {
     return (
         <div className="Passport-card font-aktiv-grotesk">
             <div className="Passport-card-top-half">
                 <div>
-                    <div className="qr-code"></div>
+                    <QRCode value={qrCodeValue} level="L" bgColor="#faf2e9" fgColor="#000000" />
                     <div>
                         <div className="Passport-card-section-text">
                             <div className="Passport-card-font-xsmall">SEAT</div>

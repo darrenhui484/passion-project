@@ -1,11 +1,13 @@
 $bg-color: #faf2e9;
+$bg-color-top: #fffcf5;
 
 .Dream-page {
 }
 
 .Dream-page-title-container {
+    position: relative;
     height: 1200px;
-    background-color: lightblue;
+    background-color: $bg-color-top;
 }
 
 .Dream-page-boarding-gates-container {
@@ -40,22 +42,47 @@ $bg-color: #faf2e9;
 }
 
 .Dream-page-departures {
+    $color: #6a6499;
+    display: flex;
+    align-items: center;
     position: absolute;
-    width: 427px;
-    height: 73px;
-    background-color: purple;
     left: 100px;
     top: 680px;
+    border: $color 3px solid;
+    color: $color;
+    padding: 10px;
+
+    .Dream-page-departures-text {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    .Dream-page-departures-arrow {
+        margin-left: 90px;
+    }
 }
 
 .Dream-page-book-flight {
+    $color: #f97935;
     position: absolute;
-    width: 325px;
-    height: 425px;
-    background-color: red;
-    opacity: 50%;
+    width: 305px;
     left: 1245px;
     top: 175px;
+    border: $color 3px solid;
+    color: $color;
+    padding: 20px;
+
+    .Dream-page-book-flight-icon {
+    }
+    .Dream-page-book-flight-title {
+        margin-top: 170px;
+        font-size: 45px;
+        font-weight: bold;
+    }
+    .Dream-page-book-flight-description {
+        margin-top: 10px;
+        font-size: 20px;
+    }
 }
 
 .Dream-page-text-section-1 {

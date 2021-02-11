@@ -11,6 +11,7 @@ function generateDummyData() {
         seat: 'PASSION',
         title: 'DEVELOPING COUNTRY',
         description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
     };
 
     const passportProps2 = {
@@ -20,6 +21,7 @@ function generateDummyData() {
         seat: 'PASSION',
         title: 'DEVELOPING COUNTRY',
         description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
     };
 
     const passportProps3 = {
@@ -29,6 +31,7 @@ function generateDummyData() {
         seat: 'PASSION',
         title: 'DEVELOPING COUNTRY',
         description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
     };
 
     const passportProps4 = {
@@ -38,6 +41,7 @@ function generateDummyData() {
         seat: 'PASSION',
         title: 'DEVELOPING COUNTRY',
         description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
     };
 
     const passportProps5 = {
@@ -47,6 +51,7 @@ function generateDummyData() {
         seat: 'PASSION',
         title: 'DEVELOPING COUNTRY',
         description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
     };
 
     return [passportProps, passportProps2, passportProps3, passportProps4, passportProps5];
@@ -75,8 +80,22 @@ function DreamPage(): ReactElement {
                     <div className="Dream-page-title-2">OF DREAMS</div>
                 </div>
 
-                <div className="Dream-page-departures">DEPARTURES</div>
-                <div className="Dream-page-book-flight">BOOK FLIGHT</div>
+                <div className="Dream-page-departures">
+                    <div className="Dream-page-departures-text">DEPARTURES</div>
+                    <div className="Dream-page-departures-arrow">ICON</div>
+                </div>
+                <div className="Dream-page-book-flight">
+                    <div className="Dream-page-book-flight-arrow">ICON</div>
+                    <div className="Dream-page-book-flight-title">
+                        BOOK
+                        <br />
+                        YOUR FLIGHT
+                    </div>
+                    <div className="Dream-page-book-flight-description">
+                        Everything starts with an inspiration, a passion or a vision. So, book your flight to anywhere
+                        in the world. Where will you be?
+                    </div>
+                </div>
                 <div className="Dream-page-text-section-2 Dream-page-font-medium">
                     So, here we aim to create a community of dreamers driven by either an inspiration, a passion or
                     vision for change. By writing your own dreams and reading other people’s dreaming destination, you

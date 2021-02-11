@@ -19,6 +19,7 @@ function PassportCardSlider({ passportCardPropsList }: IPassportCardSliderProps)
                         seat={passportCardProps.seat}
                         title={passportCardProps.title}
                         description={passportCardProps.description}
+                        qrCodeValue={passportCardProps.qrCodeValue}
                     />
                 </div>
             ))}

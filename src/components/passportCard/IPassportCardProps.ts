@@ -5,4 +5,5 @@ export interface IPassportCardProps {
     seat: string;
     title: string;
     description: string;
+    qrCodeValue: string;
 }
