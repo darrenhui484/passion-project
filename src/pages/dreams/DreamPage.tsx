@@ -85,7 +85,9 @@ function DreamPage(): ReactElement {
                     <div className="Dream-page-departures-arrow">ICON</div>
                 </div>
                 <div className="Dream-page-book-flight">
-                    <div className="Dream-page-book-flight-arrow">ICON</div>
+                    <div className="Dream-page-book-flight-arrow-container">
+                        <div className="Dream-page-book-flight-arrow">ICON</div>
+                    </div>
                     <div className="Dream-page-book-flight-title">
                         BOOK
                         <br />

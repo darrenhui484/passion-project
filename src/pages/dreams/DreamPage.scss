@@ -146,8 +146,14 @@ $bg-color-top: #fffcf5;
 
     @include card-hover-animation($color);
 
-    .Dream-page-book-flight-icon {
+    .Dream-page-book-flight-arrow {
     }
+
+    .Dream-page-book-flight-arrow-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .Dream-page-book-flight-title {
         margin-top: 170px;
         font-size: 45px;
