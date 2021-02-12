@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import PassportCardSlider from '../../components/passportCardSlider/PassportCardSlider';
 import './DreamPage.scss';
+import Arrow from '../../components/arrow/Arrow';
 
 function generateDummyData() {
     const passportProps = {
@@ -82,11 +83,17 @@ function DreamPage(): ReactElement {
 
                 <div className="Dream-page-departures">
                     <div className="Dream-page-departures-text">DEPARTURES</div>
-                    <div className="Dream-page-departures-arrow">ICON</div>
+                    <div className="Dream-page-departures-arrow-container">
+                        <div className="Dream-page-departures-arrow">
+                            <Arrow />
+                        </div>
+                    </div>
                 </div>
                 <div className="Dream-page-book-flight">
                     <div className="Dream-page-book-flight-arrow-container">
-                        <div className="Dream-page-book-flight-arrow">ICON</div>
+                        <div className="Dream-page-book-flight-arrow">
+                            <Arrow />
+                        </div>
                     </div>
                     <div className="Dream-page-book-flight-title">
                         BOOK
@@ -112,7 +119,11 @@ function DreamPage(): ReactElement {
                 <div className="Dream-page-boarding-gates-view-gates-btn-container">
                     <div className="Dream-page-boarding-gates-view-gates-btn">
                         <div className="Dream-page-boarding-gates-view-gates-btn-text">VIEW ALL GATES</div>
-                        <div className="Dream-page-boarding-gates-view-gates-btn-arrow">A</div>
+                        <div className="Dream-page-boarding-gates-view-gates-btn-arrow-container">
+                            <div className="Dream-page-boarding-gates-view-gates-btn-arrow">
+                                <Arrow />
+                            </div>
+                        </div>
                     </div>
                 </div>
 

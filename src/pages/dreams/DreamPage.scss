@@ -1,5 +1,6 @@
 $bg-color: #faf2e9;
 $bg-color-top: #fffcf5;
+$arrow-width: 50px;
 
 @mixin card-hover-animation($shadow-color) {
     $timing: 300ms;
@@ -59,7 +60,7 @@ $bg-color-top: #fffcf5;
                     }
                 }
 
-                .Dream-page-boarding-gates-view-gates-btn-arrow {
+                .Dream-page-boarding-gates-view-gates-btn-arrow-container {
                     transform: translateX(10px);
                 }
             }
@@ -84,10 +85,17 @@ $bg-color-top: #fffcf5;
                 }
             }
 
-            .Dream-page-boarding-gates-view-gates-btn-arrow {
+            .Dream-page-boarding-gates-view-gates-btn-arrow-container {
                 margin-left: 50px;
-
+                width: $arrow-width;
                 transition: transform $timing;
+                .Dream-page-boarding-gates-view-gates-btn-arrow {
+                    transform: rotate(90deg);
+
+                    & > * {
+                        stroke: black;
+                    }
+                }
             }
         }
     }
@@ -121,6 +129,7 @@ $bg-color-top: #fffcf5;
     border: $color 3px solid;
     color: $color;
     padding: 10px;
+    width: 400px;
 
     @include card-hover-animation($color);
 
@@ -129,8 +138,16 @@ $bg-color-top: #fffcf5;
         font-weight: bold;
     }
 
-    .Dream-page-departures-arrow {
-        margin-left: 90px;
+    .Dream-page-departures-arrow-container {
+        margin-left: 30px;
+        .Dream-page-departures-arrow {
+            & > * {
+                stroke: $color;
+            }
+
+            width: $arrow-width;
+            transform: rotate(90deg);
+        }
     }
 }
 
@@ -146,16 +163,18 @@ $bg-color-top: #fffcf5;
 
     @include card-hover-animation($color);
 
-    .Dream-page-book-flight-arrow {
-    }
-
     .Dream-page-book-flight-arrow-container {
         display: flex;
         justify-content: flex-end;
+
+        .Dream-page-book-flight-arrow {
+            transform: rotate(90deg);
+            width: $arrow-width;
+        }
     }
 
     .Dream-page-book-flight-title {
-        margin-top: 170px;
+        margin-top: 150px;
         font-size: 45px;
         font-weight: bold;
     }

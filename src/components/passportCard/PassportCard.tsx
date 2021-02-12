@@ -3,7 +3,7 @@ import { IPassportCardProps } from './IPassportCardProps';
 import './PassportCard.scss';
 import { QRCode } from 'react-qr-svg';
 
-export function PassportCard({
+function PassportCard({
     countryFrom,
     countryTo,
     date,
