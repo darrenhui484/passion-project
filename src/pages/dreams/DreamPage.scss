@@ -24,9 +24,146 @@ $arrow-width: 50px;
 }
 
 .Dream-page-title-container {
+    $grid-line-color: #e9e2d1;
+
     position: relative;
     height: 1200px;
     background-color: $bg-color-top;
+    background-size: 100px 100px;
+    background-image: linear-gradient(to right, $grid-line-color 1px, transparent 1px),
+        linear-gradient(to bottom, $grid-line-color 1px, transparent 1px);
+
+    .Dream-page-text-section-1 {
+        position: absolute;
+        width: 555px;
+        left: 370px;
+        top: 100px;
+        z-index: 1;
+
+        .Dream-page-text-section-1-title {
+            position: relative;
+            font-size: 60px;
+        }
+
+        .Dream-page-text-section-1-description {
+            position: relative;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    }
+
+    .Dream-page-circle {
+        $diameter: 280px;
+        position: absolute;
+        top: 50px;
+        left: 220px;
+        height: $diameter;
+        width: $diameter;
+        border-radius: 50%;
+        background-color: #faf2e9;
+        opacity: 0.8;
+    }
+
+    .Dream-page-airplane-container {
+        position: absolute;
+        height: 700px;
+        width: 700px;
+        left: 980px;
+        top: 700px;
+    }
+
+    .Dream-page-title {
+        position: absolute;
+        font-size: 148px;
+        letter-spacing: 3.26px;
+        height: 40%;
+        top: 470px;
+
+        .Dream-page-title-1 {
+            position: relative;
+            left: 100px;
+        }
+        .Dream-page-title-2 {
+            position: relative;
+            top: -60px;
+            left: 600px;
+        }
+    }
+
+    .Dream-page-departures {
+        $color: #6a6499;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 100px;
+        top: 680px;
+        border: $color 3px solid;
+        color: $color;
+        padding: 10px;
+        width: 400px;
+        background-color: $bg-color-top;
+
+        @include card-hover-animation($color);
+
+        .Dream-page-departures-text {
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        .Dream-page-departures-arrow-container {
+            margin-left: 40px;
+            .Dream-page-departures-arrow {
+                & > * {
+                    stroke: $color;
+                }
+
+                width: $arrow-width;
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    .Dream-page-book-flight {
+        $color: #f97935;
+        position: absolute;
+        width: 305px;
+        left: 1245px;
+        top: 175px;
+        border: $color 3px solid;
+        color: $color;
+        padding: 20px;
+        background-color: $bg-color-top;
+
+        @include card-hover-animation($color);
+
+        .Dream-page-book-flight-arrow-container {
+            display: flex;
+            justify-content: flex-end;
+
+            .Dream-page-book-flight-arrow {
+                transform: rotate(90deg);
+                width: $arrow-width;
+            }
+        }
+
+        .Dream-page-book-flight-title {
+            margin-top: 150px;
+            font-size: 45px;
+            font-weight: bold;
+        }
+        .Dream-page-book-flight-description {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    }
+
+    .Dream-page-text-section-2 {
+        position: absolute;
+        width: 545px;
+        top: 950px;
+        left: 600px;
+        font-size: 18px;
+    }
 }
 
 .Dream-page-boarding-gates-container {
@@ -99,115 +236,4 @@ $arrow-width: 50px;
             }
         }
     }
-}
-
-.Dream-page-title {
-    position: absolute;
-    font-size: 148px;
-    letter-spacing: 3.26px;
-    height: 40%;
-    top: 470px;
-
-    .Dream-page-title-1 {
-        position: relative;
-        left: 100px;
-    }
-    .Dream-page-title-2 {
-        position: relative;
-        top: -60px;
-        left: 600px;
-    }
-}
-
-.Dream-page-departures {
-    $color: #6a6499;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 100px;
-    top: 680px;
-    border: $color 3px solid;
-    color: $color;
-    padding: 10px;
-    width: 400px;
-
-    @include card-hover-animation($color);
-
-    .Dream-page-departures-text {
-        font-size: 45px;
-        font-weight: bold;
-    }
-
-    .Dream-page-departures-arrow-container {
-        margin-left: 30px;
-        .Dream-page-departures-arrow {
-            & > * {
-                stroke: $color;
-            }
-
-            width: $arrow-width;
-            transform: rotate(90deg);
-        }
-    }
-}
-
-.Dream-page-book-flight {
-    $color: #f97935;
-    position: absolute;
-    width: 305px;
-    left: 1245px;
-    top: 175px;
-    border: $color 3px solid;
-    color: $color;
-    padding: 20px;
-
-    @include card-hover-animation($color);
-
-    .Dream-page-book-flight-arrow-container {
-        display: flex;
-        justify-content: flex-end;
-
-        .Dream-page-book-flight-arrow {
-            transform: rotate(90deg);
-            width: $arrow-width;
-        }
-    }
-
-    .Dream-page-book-flight-title {
-        margin-top: 150px;
-        font-size: 45px;
-        font-weight: bold;
-    }
-    .Dream-page-book-flight-description {
-        margin-top: 10px;
-        font-size: 20px;
-    }
-}
-
-.Dream-page-text-section-1 {
-    position: absolute;
-    width: 555px;
-    left: 370px;
-    top: 100px;
-
-    .Dream-page-text-section-1-title {
-        position: relative;
-        font-size: 60px;
-    }
-
-    .Dream-page-text-section-1-description {
-        position: relative;
-        margin-top: 10px;
-    }
-}
-
-.Dream-page-text-section-2 {
-    position: absolute;
-    width: 545px;
-    top: 950px;
-    left: 600px;
-}
-
-.Dream-page-font-medium {
-    font-size: 18px;
 }

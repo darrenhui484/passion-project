@@ -16,7 +16,7 @@ function PassportCard({
         <div className="Passport-card font-aktiv-grotesk">
             <div className="Passport-card-top-half">
                 <div>
-                    <QRCode value={qrCodeValue} level="L" bgColor="#faf2e9" fgColor="#000000" />
+                    <QRCode value={qrCodeValue} level="L" bgColor="#536c28" fgColor="#faf2e9" />
                     <div>
                         <div className="Passport-card-section-text">
                             <div className="Passport-card-font-xsmall">SEAT</div>

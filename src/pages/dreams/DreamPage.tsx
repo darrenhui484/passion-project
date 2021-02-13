@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar/Navbar';
 import PassportCardSlider from '../../components/passportCardSlider/PassportCardSlider';
 import './DreamPage.scss';
 import Arrow from '../../components/arrow/Arrow';
+import Airplane from '../../components/airplane/Airplane';
 
 function generateDummyData() {
     const passportProps = {
@@ -67,7 +68,7 @@ function DreamPage(): ReactElement {
                     <div className="Dream-page-text-section-1-title font-saol-display">
                         <i>Dreaming</i> is the first step to <i>believing</i>
                     </div>
-                    <div className="Dream-page-text-section-1-description Dream-page-font-medium">
+                    <div className="Dream-page-text-section-1-description">
                         Taking a moment to dream of a life without limitations is something we often take for granted,
                         disregard or even find it challenging to imagine. This is because all too often our beliefs and
                         potential have been shaped by our upbringing and social expectations. So, the opportunity to
@@ -76,6 +77,13 @@ function DreamPage(): ReactElement {
                         dreaming alone can be scary and isolating.
                     </div>
                 </div>
+
+                <div className="Dream-page-circle" />
+
+                <div className="Dream-page-airplane-container">
+                    <Airplane />
+                </div>
+
                 <div className="Dream-page-title font-saol-display">
                     <div className="Dream-page-title-1">A COLLECTION</div>
                     <div className="Dream-page-title-2">OF DREAMS</div>
@@ -105,7 +113,7 @@ function DreamPage(): ReactElement {
                         in the world. Where will you be?
                     </div>
                 </div>
-                <div className="Dream-page-text-section-2 Dream-page-font-medium">
+                <div className="Dream-page-text-section-2">
                     So, here we aim to create a community of dreamers driven by either an inspiration, a passion or
                     vision for change. By writing your own dreams and reading other people’s dreaming destination, you
                     realise that you aren’t alone. Every half year, your boarding pass will appear in your email to
