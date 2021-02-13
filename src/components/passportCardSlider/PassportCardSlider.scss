@@ -1,8 +1,11 @@
 .Passport-card-slider {
     display: flex;
     flex-direction: row;
-    padding: 150px 30px;
-    overflow: scroll;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
 }
 
 .Passport-card-element {

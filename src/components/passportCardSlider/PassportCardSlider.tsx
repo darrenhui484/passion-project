@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 import './PassportCardSlider.scss';
 import { IPassportCardProps } from '../passportCard/IPassportCardProps';
 import PassportCard from '../passportCard/PassportCard';
+import ScrollContainer from 'react-indiana-drag-scroll';
 
 interface IPassportCardSliderProps {
     passportCardPropsList: IPassportCardProps[];
@@ -9,7 +10,7 @@ interface IPassportCardSliderProps {
 
 function PassportCardSlider({ passportCardPropsList }: IPassportCardSliderProps): ReactElement {
     return (
-        <div className="Passport-card-slider">
+        <ScrollContainer className="Passport-card-slider">
             {passportCardPropsList.map((passportCardProps, i) => (
                 <div className="Passport-card-element" key={i}>
                     <PassportCard
@@ -23,7 +24,7 @@ function PassportCardSlider({ passportCardPropsList }: IPassportCardSliderProps)
                     />
                 </div>
             ))}
-        </div>
+        </ScrollContainer>
     );
 }
 
