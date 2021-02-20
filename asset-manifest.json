@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/passion-project/static/css/main.74bd4dbd.chunk.css",
-    "main.js": "/passion-project/static/js/main.422c6a57.chunk.js",
-    "main.js.map": "/passion-project/static/js/main.422c6a57.chunk.js.map",
-    "runtime-main.js": "/passion-project/static/js/runtime-main.b4ac977d.js",
-    "runtime-main.js.map": "/passion-project/static/js/runtime-main.b4ac977d.js.map",
-    "static/js/2.abf60e60.chunk.js": "/passion-project/static/js/2.abf60e60.chunk.js",
-    "static/js/2.abf60e60.chunk.js.map": "/passion-project/static/js/2.abf60e60.chunk.js.map",
-    "static/js/3.660efeaf.chunk.js": "/passion-project/static/js/3.660efeaf.chunk.js",
-    "static/js/3.660efeaf.chunk.js.map": "/passion-project/static/js/3.660efeaf.chunk.js.map",
+    "main.css": "/passion-project/static/css/main.d00334e3.chunk.css",
+    "main.js": "/passion-project/static/js/main.0477abcb.chunk.js",
+    "main.js.map": "/passion-project/static/js/main.0477abcb.chunk.js.map",
+    "runtime-main.js": "/passion-project/static/js/runtime-main.d197b4f6.js",
+    "runtime-main.js.map": "/passion-project/static/js/runtime-main.d197b4f6.js.map",
+    "static/js/2.81bd37b3.chunk.js": "/passion-project/static/js/2.81bd37b3.chunk.js",
+    "static/js/2.81bd37b3.chunk.js.map": "/passion-project/static/js/2.81bd37b3.chunk.js.map",
+    "static/js/3.b51efcd1.chunk.js": "/passion-project/static/js/3.b51efcd1.chunk.js",
+    "static/js/3.b51efcd1.chunk.js.map": "/passion-project/static/js/3.b51efcd1.chunk.js.map",
     "index.html": "/passion-project/index.html",
-    "static/css/main.74bd4dbd.chunk.css.map": "/passion-project/static/css/main.74bd4dbd.chunk.css.map",
-    "static/js/2.abf60e60.chunk.js.LICENSE.txt": "/passion-project/static/js/2.abf60e60.chunk.js.LICENSE.txt",
+    "static/css/main.d00334e3.chunk.css.map": "/passion-project/static/css/main.d00334e3.chunk.css.map",
+    "static/js/2.81bd37b3.chunk.js.LICENSE.txt": "/passion-project/static/js/2.81bd37b3.chunk.js.LICENSE.txt",
     "static/media/index.css": "/passion-project/static/media/vcr-osd-mono.10cf96d5.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.b4ac977d.js",
-    "static/js/2.abf60e60.chunk.js",
-    "static/css/main.74bd4dbd.chunk.css",
-    "static/js/main.422c6a57.chunk.js"
+    "static/js/runtime-main.d197b4f6.js",
+    "static/js/2.81bd37b3.chunk.js",
+    "static/css/main.d00334e3.chunk.css",
+    "static/js/main.0477abcb.chunk.js"
   ]
 }
