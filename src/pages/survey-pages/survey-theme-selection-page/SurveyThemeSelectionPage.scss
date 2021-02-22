@@ -1,0 +1,127 @@
+.Survey-page-left-selected {
+    animation: left-selected-keyframes 200ms ease-in forwards;
+}
+
+.Survey-page-right-to-center-selected {
+    animation: right-to-center-selected-keyframes 200ms ease-in forwards;
+}
+
+.Survey-page-left-to-center-selected {
+    animation: left-to-center-selected-keyframes 200ms ease-in forwards;
+}
+
+.Survey-page-right-selected {
+    animation: right-selected-keyframes 200ms ease-in forwards;
+}
+
+@keyframes left-selected-keyframes {
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+@keyframes left-to-center-selected-keyframes {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right-to-center-selected-keyframes {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right-selected-keyframes {
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.Survey-theme-selection-page {
+    .Survey-page-top-container {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    .Survey-page-circle-bottom-container {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%) scaleY(-1);
+        width: 80%;
+    }
+
+    .Survey-page-choices-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        height: 100%;
+        width: 100%;
+
+        .Survey-page-choices-title {
+            font-size: 23px;
+            position: absolute;
+            top: 40%;
+        }
+
+        .Survey-page-choices {
+            width: 100%;
+            height: 100%;
+            font-size: 130px;
+            position: relative;
+
+            @mixin hover-scale {
+                transition: all 150ms ease-in;
+
+                &:hover {
+                    transform: translate(-50%, -50%) scale(1.1);
+                }
+            }
+
+            .Survey-page-choices-item-1 {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                left: 0%;
+                transform: translate(-50%, -50%);
+
+                @include hover-scale();
+            }
+
+            .Survey-page-choices-item-2 {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                @include hover-scale();
+            }
+
+            .Survey-page-choices-item-3 {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                transform: translate(-50%, -50%);
+
+                @include hover-scale();
+            }
+        }
+    }
+}

@@ -16,13 +16,20 @@ code {
 }
 
 @font-face {
-    font-family: 'Saol Display Regular';
-    src: url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot');
-    src: url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot?#iefix') format('embedded-opentype'),
-        url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff2') format('woff2'),
-        url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff') format('woff'),
-        url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.ttf') format('truetype'),
-        url('//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.svg#Saol Display Regular') format('svg');
+    font-family: 'Saol Display';
+    src: url(./fonts/saol-display/SaolDisplay-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Saol Display';
+    src: url(./fonts/saol-display/SaolDisplay-Medium.otf) format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Saol Display';
+    src: url(./fonts/saol-display/SaolDisplay-MediumItalic.otf) format('opentype');
+    font-style: italic;
 }
 
 .font-aktiv-grotesk {
@@ -34,5 +41,5 @@ code {
 }
 
 .font-saol-display {
-    font-family: 'Saol Display Regular', 'sans-serif';
+    font-family: 'Saol Display', 'sans-serif';
 }

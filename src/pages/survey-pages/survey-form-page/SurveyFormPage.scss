@@ -1,0 +1,99 @@
+.Survey-form-page {
+    display: flex;
+    justify-content: center;
+
+    .Survey-form-page-question-container {
+        margin-top: 190px;
+        color: #fff7f0;
+        font-size: 23px;
+
+        .Survey-form-page-question {
+        }
+
+        .Survey-form-page-question-img {
+        }
+    }
+    .Survey-form-page-nav-menu-container {
+        $border-color: #fff7f0;
+        position: absolute;
+        top: 45%;
+        left: 10%;
+
+        @mixin nav-menu-item {
+            width: 64px;
+            height: 64px;
+            border: 3px solid $border-color;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Survey-form-page-nav-menu-question {
+            @include nav-menu-item;
+            margin-top: 0px;
+            background-color: $border-color;
+            font-size: 28px;
+            color: #080808;
+        }
+        .Survey-form-page-nav-menu-theme {
+            margin-top: 32px;
+            @include nav-menu-item;
+        }
+
+        @mixin nav-button-hover-show-text {
+        }
+
+        .Survey-form-page-nav-menu-back-container {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+
+            .Survey-arrow {
+                transform: scale(1.5);
+            }
+
+            .Survey-form-page-nav-menu-back {
+                @include nav-menu-item;
+                &:hover ~ .Survey-form-page-nav-menu-back-text {
+                    opacity: 1;
+                    transition: 300ms ease-in;
+                }
+            }
+
+            .Survey-form-page-nav-menu-back-text {
+                opacity: 0;
+                font-size: 18px;
+                margin-left: 20px;
+            }
+        }
+
+        .Survey-form-page-nav-menu-forward-container {
+            display: flex;
+            align-items: center;
+            margin-top: 32px;
+
+            .Survey-form-page-nav-menu-forward {
+                @include nav-menu-item;
+                &:hover ~ .Survey-form-page-nav-menu-forward-text {
+                    opacity: 1;
+                    transition: 300ms ease-in;
+                }
+
+                .Survey-arrow {
+                    transform: scale(-1.5);
+                }
+            }
+
+            .Survey-form-page-nav-menu-forward-text {
+                opacity: 0;
+                font-size: 18px;
+                margin-left: 20px;
+            }
+        }
+    }
+    .Survey-form-page-input-container {
+    }
+    .Survey-form-page-progress-container {
+    }
+}

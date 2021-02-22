@@ -20,16 +20,36 @@ $arrow-width: 50px;
     }
 }
 
+@mixin slide-fade-in-animation($x, $y, $timing, $bezier) {
+    @keyframes slide-fade-in {
+        0% {
+            transform: translate($x, $y);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translate(0px, 0px);
+            opacity: 1;
+        }
+    }
+
+    animation: slide-fade-in $timing $bezier;
+}
+
 .Dream-page {
+    p {
+        line-height: 144%;
+        margin: 0;
+    }
 }
 
 .Dream-page-title-container {
     $grid-line-color: #e9e2d1;
 
     position: relative;
-    height: 1200px;
+    height: 1545px;
     background-color: $bg-color-top;
-    background-size: 100px 100px;
+    background-size: 112px 112px;
     background-image: linear-gradient(to right, $grid-line-color 1px, transparent 1px),
         linear-gradient(to bottom, $grid-line-color 1px, transparent 1px);
 
@@ -37,26 +57,29 @@ $arrow-width: 50px;
         position: absolute;
         width: 555px;
         left: 370px;
-        top: 100px;
+        top: 193px;
         z-index: 1;
+
+        @include slide-fade-in-animation(-30px, -30px, 1s, ease-in);
 
         .Dream-page-text-section-1-title {
             position: relative;
             font-size: 60px;
+            font-weight: 500;
         }
 
         .Dream-page-text-section-1-description {
             position: relative;
-            margin-top: 10px;
+            margin-top: 25px;
             font-size: 18px;
         }
     }
 
     .Dream-page-circle {
-        $diameter: 280px;
+        $diameter: 347px;
         position: absolute;
-        top: 50px;
-        left: 220px;
+        top: 43px;
+        left: 140px;
         height: $diameter;
         width: $diameter;
         border-radius: 50%;
@@ -67,17 +90,20 @@ $arrow-width: 50px;
     .Dream-page-airplane-container {
         position: absolute;
         height: 700px;
-        width: 700px;
-        left: 980px;
-        top: 700px;
+        width: 786px;
+        left: 965px;
+        top: 880px;
     }
 
     .Dream-page-title {
         position: absolute;
-        font-size: 148px;
+        font-size: 163px;
+        font-weight: 500;
         letter-spacing: 3.26px;
         height: 40%;
-        top: 470px;
+        top: 601px;
+
+        @include slide-fade-in-animation(-30px, -30px, 1s, ease-in);
 
         .Dream-page-title-1 {
             position: relative;
@@ -85,8 +111,8 @@ $arrow-width: 50px;
         }
         .Dream-page-title-2 {
             position: relative;
-            top: -60px;
-            left: 600px;
+            top: -39px;
+            left: 653px;
         }
     }
 
@@ -96,8 +122,8 @@ $arrow-width: 50px;
         align-items: center;
         position: absolute;
         left: 100px;
-        top: 680px;
-        border: $color 3px solid;
+        top: 868px;
+        border: $color 4px solid;
         color: $color;
         padding: 10px;
         width: 400px;
@@ -118,7 +144,7 @@ $arrow-width: 50px;
                 }
 
                 width: $arrow-width;
-                transform: rotate(135deg);
+                transform: rotate(135deg) scale(1.5) translateY(4px);
             }
         }
     }
@@ -127,11 +153,13 @@ $arrow-width: 50px;
         $color: #f97935;
         position: absolute;
         width: 305px;
-        left: 1245px;
-        top: 175px;
+        left: 1375px;
+        top: 298px;
         border: $color 3px solid;
         color: $color;
-        padding: 20px;
+        padding: 26px;
+        padding-right: 35px;
+        padding-bottom: 20px;
         background-color: $bg-color-top;
 
         @include card-hover-animation($color);
@@ -141,7 +169,7 @@ $arrow-width: 50px;
             justify-content: flex-end;
 
             .Dream-page-book-flight-arrow {
-                transform: rotate(90deg);
+                transform: rotate(90deg) scale(1.5);
                 width: $arrow-width;
             }
         }
@@ -159,10 +187,12 @@ $arrow-width: 50px;
 
     .Dream-page-text-section-2 {
         position: absolute;
-        width: 545px;
-        top: 950px;
-        left: 600px;
+        width: 540px;
+        top: 1220px;
+        left: 640px;
         font-size: 18px;
+
+        @include slide-fade-in-animation(-30px, -30px, 1s, ease-in);
     }
 }
 
@@ -174,7 +204,8 @@ $arrow-width: 50px;
         position: absolute;
         left: 100px;
         top: -122px;
-        font-size: 148px;
+        font-size: 163px;
+        font-weight: 500;
     }
 
     .Dream-page-boarding-gates-view-gates-btn-container {

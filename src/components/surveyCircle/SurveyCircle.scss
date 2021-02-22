@@ -1,0 +1,29 @@
+.Survey-circle-1,
+.Survey-circle-3,
+.Survey-circle-5,
+.Survey-circle-6 {
+    fill: none;
+    stroke: #fff7f0;
+    stroke-miterlimit: 10;
+}
+.Survey-circle-1 {
+    stroke-width: 1.37px;
+}
+.Survey-circle-1,
+.Survey-circle-3,
+.Survey-circle-4 {
+    opacity: 0.9;
+}
+.Survey-circle-2 {
+    fill: #fff7f0;
+}
+.Survey-circle-3 {
+    stroke-linecap: round;
+}
+.Survey-circle-5,
+.Survey-circle-6 {
+    stroke-width: 0.75px;
+}
+.Survey-circle-6 {
+    stroke-dasharray: 7.93 7.93;
+}

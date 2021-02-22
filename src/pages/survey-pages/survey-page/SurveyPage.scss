@@ -1,0 +1,15 @@
+$bg-color: #080808;
+$text-color: #fffcf5;
+
+.Survey-page {
+    background-color: $bg-color;
+    color: $text-color;
+    height: 100vh;
+
+    .Survey-page-exit-btn {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
