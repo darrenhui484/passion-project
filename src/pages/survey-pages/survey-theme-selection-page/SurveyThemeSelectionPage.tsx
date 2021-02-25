@@ -1,6 +1,6 @@
 import { ReactElement, useState } from 'react';
 import './SurveyThemeSelectionPage.scss';
-import SurveyCircle from '../../../components/surveyCircle/SurveyCircle';
+import SurveyCircle from '../../../components/surveyNavMenu/surveyCircle/SurveyCircle';
 
 interface SurveyThemeSelectionPageProps {
     themeSelectedHandler(theme: string): void;
