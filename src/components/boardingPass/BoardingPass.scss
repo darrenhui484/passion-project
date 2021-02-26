@@ -1,75 +1,148 @@
-$left-section-width: 290px;
-$right-section-left-padding: 26px;
-$right-section-right-padding: 26px;
-$right-section-top-padding: 26px;
+$boarding-pass-width: 1335px;
+$left-side-width: 908px;
+$left-side-left-section-width: 290px;
+$right-section-padding: 26px;
+
+$content-color: #fff7f0;
+$background-color: #05466e;
 
 .Boarding-pass {
-    background-color: #05466e;
-    color: #fff7f0;
+    background-color: $background-color;
+    color: $content-color;
     display: flex;
-    width: 1335px;
+    width: $boarding-pass-width;
 }
 
 .Boarding-pass-left-side {
     margin: 42px 35px;
     position: relative;
-    width: 908px;
+    width: $left-side-width;
 }
 
 .Boarding-pass-left-side-top-horizontal-divider {
-    border-bottom: 6px solid #fff7f0;
+    border-top: 6px solid $content-color;
     content: '';
     position: absolute;
     width: 100%;
 }
 
 .Boarding-pass-left-side-middle-vertical-divider {
-    border-right: 1px solid #fff7f0;
+    border-right: 1px solid $content-color;
     height: 100%;
-    left: $left-section-width;
+    left: $left-side-left-section-width;
     position: absolute;
 }
 
 .Boarding-pass-left-side-top-section {
-    border-bottom: 1px solid #fff7f0;
+    border-bottom: 1px solid $content-color;
     display: flex;
     padding-top: 42px;
     padding-bottom: 24px;
 }
 
-.Boarding-pass-left-side-top-section-left-side {
-    min-width: $left-section-width;
-}
-
 .Boarding-pass-left-side-main-question {
     font-size: 24px;
-    padding-left: $right-section-left-padding;
-    padding-right: $right-section-right-padding;
+    padding-left: $right-section-padding;
+    padding-right: $right-section-padding;
 }
 
-.Boarding-pass-left-side-from-title {
+.Boarding-pass-left-side-middle-section {
+    display: flex;
 }
-.Boarding-pass-left-side-from-place {
+
+.Boarding-pass-left-side-left-side {
+    max-width: $left-side-left-section-width;
+    // There is some glitch where setting just width isn't working
+    min-width: $left-side-left-section-width;
 }
-.Boarding-pass-left-side-to-title {
+
+.Boarding-pass-left-side-country-container {
+    border-bottom: 1px solid $content-color;
+    border-left: 1px solid $content-color;
+    display: flex;
+    flex-direction: column;
+    height: 46px;
+    padding: 6px 10px;
 }
-.Boarding-pass-left-side-to-place {
+
+.Boarding-pass-left-side-country-title {
+    font-size: 14px;
+}
+
+.Boarding-pass-left-side-country-place {
+    font-size: 24px;
 }
 
 .Boarding-pass-left-side-main-answer {
+    font-size: 20px;
+    padding: $right-section-padding;
+}
+
+.Boarding-pass-left-side-bottom-section {
+    border-bottom: 1px solid $content-color;
+    display: flex;
 }
 
 .Boarding-pass-left-side-question-two {
+    font-size: 14px;
 }
 
 .Boarding-pass-left-side-answer-two {
+    font-size: 13px;
+    padding: 6px 6px 10px 0;
 }
 
-.Boarding-pass-left-side-date {
+.Boarding-pass-left-side-stamp-container {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 2.73px;
+    opacity: 0.15;
+    padding: $right-section-padding;
 }
 
-.Boarding-pass-left-side-boarding-pass-text {
+.Boarding-pass-left-numbers-container {
+    align-items: center;
+    border: 1px solid $content-color;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 43px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
 }
 
-.Boarding-pass-left-side-question-number {
+.Boarding-pass-left-number-container {
+    font-size: 22px;
+    height: 100%;
+    width: 106px;
+}
+
+.Boarding-pass-left-number-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Boarding-pass-left-number-container-selected {
+    color: $background-color;
+    background-color: $content-color;
+}
+
+.Boarding-pass-left-number {
+    font-size: 22px;
+    text-align: center;
+}
+
+.Boarding-pass-left-number-container:not(:last-child) {
+    border-right: 1px solid $content-color;
+}
+
+.Boarding-pass-right-side {
+    // TODO: need border image for custom dash
+    // https://stackoverflow.com/questions/2771171/control-the-dashed-border-stroke-length-and-distance-between-strokes
+    border-left: 1px dashed $content-color;
 }
