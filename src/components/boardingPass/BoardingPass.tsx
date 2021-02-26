@@ -1,20 +1,38 @@
 import { ReactElement } from 'react';
 import PassportCard from '../passportCard/PassportCard';
 import './BoardingPass.scss';
-
-const passportCardProps = {
-    countryFrom: 'USA',
-    countryTo: 'AUS',
-    date: '01.01.21',
-    seat: 'PASSION',
-    title: 'DEVELOPING COUNTRY',
-    description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
-    qrCodeValue: 'test',
-};
+import { IBoardingPassProps } from './IBoardingPassProps';
 
 // TODO(timcheung): Make this take in an IBoardingPassProps.
-function BoardingPass(): ReactElement {
-    // Question number css should change based on params
+function BoardingPass({
+    fromCityCountry,
+    toCityCountry,
+    mainQuestion,
+    mainAnswer,
+    secondQuestion,
+    secondAnswer,
+    questionCount,
+    currentQuestionNumber,
+    passportCardProps,
+}: IBoardingPassProps): ReactElement {
+    const questionNumberContent = [];
+    for (let i = 0; i < questionCount; i++) {
+        // TODO: This is the same thing, except the currentQuestionNumber has the selected class, clean it up
+        if (i === currentQuestionNumber) {
+            questionNumberContent.push(
+                <div className="Boarding-pass-left-number-container Boarding-pass-left-number-container-selected">
+                    <div className="Boarding-pass-left-number">0{i + 1}</div>
+                </div>,
+            );
+        } else {
+            questionNumberContent.push(
+                <div className="Boarding-pass-left-number-container">
+                    <div className="Boarding-pass-left-number">0{i + 1}</div>
+                </div>,
+            );
+        }
+    }
+
     return (
         <div className="Boarding-pass">
             <div className="Boarding-pass-left-side">
@@ -22,54 +40,32 @@ function BoardingPass(): ReactElement {
                 <div className="Boarding-pass-left-side-middle-vertical-divider"></div>
                 <div className="Boarding-pass-left-side-top-section">
                     <div className="Boarding-pass-left-side-left-side"></div>
-                    <div className="Boarding-pass-left-side-main-question">
-                        WHAT IS THE ONE THING YOU WOULD LIKE TO SEE CHANGE IN THE WORLD? WHY?
-                    </div>
+                    <div className="Boarding-pass-left-side-main-question">{mainQuestion}</div>
                 </div>
                 <div className="Boarding-pass-left-side-middle-section">
                     <div className="Boarding-pass-left-side-left-side">
                         <div className="Boarding-pass-left-side-country-container">
                             <div className="Boarding-pass-left-side-country-title">FROM</div>
-                            <div className="Boarding-pass-left-side-country-place">SYDNEY, AUSTRALIA</div>
+                            <div className="Boarding-pass-left-side-country-place">{fromCityCountry}</div>
                         </div>
                         <div className="Boarding-pass-left-side-country-container">
                             <div className="Boarding-pass-left-side-country-title">TO</div>
-                            <div className="Boarding-pass-left-side-country-place">PARIS, FRANCE</div>
+                            <div className="Boarding-pass-left-side-country-place">{toCityCountry}</div>
                         </div>
                     </div>
-                    <div className="Boarding-pass-left-side-main-answer">
-                        I would like to see a world that isn’t driven by greed and profit. I think many of the issues
-                        that we see in our world and society today, such as environmental destruction and exploitation,
-                        are caused by a small number of powerful and greedy individuals who benefit from it. I would
-                        like to see a world where these people and corporations are held accountable for their actions
-                        and the damage they have caused.
-                    </div>
+                    <div className="Boarding-pass-left-side-main-answer">{mainAnswer}</div>
                 </div>
                 <div className="Boarding-pass-left-side-bottom-section">
                     <div className="Boarding-pass-left-side-left-side">
-                        <div className="Boarding-pass-left-side-question-two">I AM GRATEFUL …</div>
-                        <div className="Boarding-pass-left-side-answer-two">
-                            that I live in a healthy, functioning body and have been brought up in a safe environment
-                            where I have the privilege to choose what I want to do in life. I am grateful that I have a
-                            small network of supportive people around me who I can be myself with.
-                        </div>
+                        <div className="Boarding-pass-left-side-question-two">{secondQuestion}</div>
+                        <div className="Boarding-pass-left-side-answer-two">{secondAnswer}</div>
                     </div>
                     <div className="Boarding-pass-left-side-stamp-container">
-                        <div className="Boarding-pass-left-side-date">26.01.21</div>
+                        <div className="Boarding-pass-left-side-date">{passportCardProps.date}</div>
                         <div className="Boarding-pass-left-boarding-pass-text">BOARDING PASS</div>
                     </div>
                 </div>
-                <div className="Boarding-pass-left-numbers-container">
-                    <div className="Boarding-pass-left-number-container Boarding-pass-left-number-container-selected">
-                        <div className="Boarding-pass-left-number">01</div>
-                    </div>
-                    <div className="Boarding-pass-left-number-container">
-                        <div className="Boarding-pass-left-number">02</div>
-                    </div>
-                    <div className="Boarding-pass-left-number-container">
-                        <div className="Boarding-pass-left-number">03</div>
-                    </div>
-                </div>
+                <div className="Boarding-pass-left-numbers-container">{questionNumberContent}</div>
             </div>
             <div className="Boarding-pass-right-side">
                 <PassportCard
