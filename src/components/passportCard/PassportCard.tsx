@@ -3,6 +3,7 @@ import { IPassportCardProps } from './IPassportCardProps';
 import './PassportCard.scss';
 import { QRCode } from 'react-qr-svg';
 
+// TODO(darrenhui484): Don't deconstruct the object param.
 function PassportCard({
     countryFrom,
     countryTo,

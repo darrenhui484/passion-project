@@ -4,12 +4,13 @@ import DreamPage from './pages/dreams/DreamPage';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import SurveyPage from './pages/survey-pages/survey-page/SurveyPage';
+import TestPage from './pages/test-page/TestPage';
 
 function App(): ReactElement {
     return (
         <ParallaxProvider>
             <div className="App">
-                <Route exact path="/" component={DreamPage}></Route>
+                <Route exact path="/" component={TestPage}></Route>
                 <Route path="/survey" component={SurveyPage}></Route>
             </div>
         </ParallaxProvider>
