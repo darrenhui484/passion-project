@@ -39,11 +39,11 @@ function BoardingPass({
                 <div className="Boarding-pass-left-side-top-horizontal-divider"></div>
                 <div className="Boarding-pass-left-side-middle-vertical-divider"></div>
                 <div className="Boarding-pass-left-side-top-section">
-                    <div className="Boarding-pass-left-side-left-side"></div>
+                    <div className="Boarding-pass-left-side-left-section"></div>
                     <div className="Boarding-pass-left-side-main-question">{mainQuestion}</div>
                 </div>
                 <div className="Boarding-pass-left-side-middle-section">
-                    <div className="Boarding-pass-left-side-left-side">
+                    <div className="Boarding-pass-left-side-left-section">
                         <div className="Boarding-pass-left-side-country-container">
                             <div className="Boarding-pass-left-side-country-title">FROM</div>
                             <div className="Boarding-pass-left-side-country-place">{fromCityCountry}</div>
@@ -56,9 +56,11 @@ function BoardingPass({
                     <div className="Boarding-pass-left-side-main-answer">{mainAnswer}</div>
                 </div>
                 <div className="Boarding-pass-left-side-bottom-section">
-                    <div className="Boarding-pass-left-side-left-side">
-                        <div className="Boarding-pass-left-side-question-two">{secondQuestion}</div>
-                        <div className="Boarding-pass-left-side-answer-two">{secondAnswer}</div>
+                    <div className="Boarding-pass-left-side-left-section Boarding-pass-left-side-left-question">
+                        <div className="Boarding-pass-left-side-question-two-container">
+                            <div className="Boarding-pass-left-side-question-two">{secondQuestion}</div>
+                            <div className="Boarding-pass-left-side-answer-two">{secondAnswer}</div>
+                        </div>
                     </div>
                     <div className="Boarding-pass-left-side-stamp-container">
                         <div className="Boarding-pass-left-side-date">{passportCardProps.date}</div>

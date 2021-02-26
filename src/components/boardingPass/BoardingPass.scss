@@ -1,5 +1,5 @@
 $boarding-pass-width: 1335px;
-$left-side-width: 908px;
+$left-side-width: 832px;
 $left-side-left-section-width: 290px;
 $right-section-padding: 26px;
 
@@ -14,7 +14,7 @@ $background-color: #05466e;
 }
 
 .Boarding-pass-left-side {
-    margin: 42px 35px;
+    margin: 42px 35px 24px;
     position: relative;
     width: $left-side-width;
 }
@@ -37,7 +37,7 @@ $background-color: #05466e;
     border-bottom: 1px solid $content-color;
     display: flex;
     padding-top: 42px;
-    padding-bottom: 24px;
+    padding-bottom: 16px;
 }
 
 .Boarding-pass-left-side-main-question {
@@ -50,7 +50,7 @@ $background-color: #05466e;
     display: flex;
 }
 
-.Boarding-pass-left-side-left-side {
+.Boarding-pass-left-side-left-section {
     max-width: $left-side-left-section-width;
     // There is some glitch where setting just width isn't working
     min-width: $left-side-left-section-width;
@@ -83,13 +83,25 @@ $background-color: #05466e;
     display: flex;
 }
 
+.Boarding-pass-left-side-left-question {
+    padding-bottom: 16px;
+}
+
+.Boarding-pass-left-side-question-two-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    padding: 0 12px;
+}
+
 .Boarding-pass-left-side-question-two {
     font-size: 14px;
 }
 
 .Boarding-pass-left-side-answer-two {
     font-size: 13px;
-    padding: 6px 6px 10px 0;
+    padding-top: 6px;
 }
 
 .Boarding-pass-left-side-stamp-container {
