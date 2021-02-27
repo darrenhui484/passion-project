@@ -14,7 +14,7 @@ const passportCardProps: IPassportCardProps = {
     qrCodeValue: 'test',
 };
 
-const BoardingPassProps: IBoardingPassProps = {
+const boardingPassProps: IBoardingPassProps = {
     fromCityCountry: 'SYDNEY, AUSTRALIA',
     toCityCountry: 'PARIS, FRANCE',
     mainQuestion: 'WHAT IS THE ONE THING YOU WOULD LIKE TO SEE CHANGE IN THE WORLD? WHY?',
@@ -35,17 +35,7 @@ const BoardingPassProps: IBoardingPassProps = {
 function TestPage(): ReactElement {
     return (
         <div className="Test-page">
-            <BoardingPass
-                fromCityCountry={BoardingPassProps.fromCityCountry}
-                toCityCountry={BoardingPassProps.toCityCountry}
-                mainQuestion={BoardingPassProps.mainQuestion}
-                mainAnswer={BoardingPassProps.mainAnswer}
-                secondQuestion={BoardingPassProps.secondQuestion}
-                secondAnswer={BoardingPassProps.secondAnswer}
-                passportCardProps={BoardingPassProps.passportCardProps}
-                questionCount={BoardingPassProps.questionCount}
-                currentQuestionNumber={BoardingPassProps.currentQuestionNumber}
-            />
+            <BoardingPass {...boardingPassProps} />
         </div>
     );
 }

@@ -3,7 +3,6 @@ import PassportCard from '../passportCard/PassportCard';
 import './BoardingPass.scss';
 import { IBoardingPassProps } from './IBoardingPassProps';
 
-// TODO(timcheung): Make this take in an IBoardingPassProps.
 function BoardingPass({
     fromCityCountry,
     toCityCountry,
