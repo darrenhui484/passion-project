@@ -1,20 +1,30 @@
 .Navbar {
+    background-color: #faf2e9;
+    border-bottom: 1px solid black;
     display: flex;
     flex-direction: row;
+    font-family: 'aktiv-grotesk-std', sans-serif;
+    height: 72px;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    padding: 0 72px 16px;
     position: sticky;
     top: 0;
-    background-color: #faf2e9;
     z-index: 10;
-
-    font-family: 'aktiv-grotesk-std', sans-serif;
 }
 
 .Navbar-items {
+    align-items: flex-end;
+    column-gap: 40px;
     display: flex;
     flex-direction: row;
     font-size: 18px;
     font-weight: bold;
-    padding: 15px;
+}
+
+.Navbar-center {
+    align-items: flex-end;
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 2px;
 }
