@@ -41,7 +41,7 @@ $background-color: #05466e;
 }
 
 .Boarding-pass-left-side-main-question {
-    font-size: 24px;
+    font-size: 18px;
     padding-left: $right-section-padding;
     padding-right: $right-section-padding;
 }
@@ -62,7 +62,8 @@ $background-color: #05466e;
     display: flex;
     flex-direction: column;
     height: 46px;
-    padding: 6px 10px;
+    padding: 6px 10px 0;
+    row-gap: 2px;
 }
 
 .Boarding-pass-left-side-country-title {
