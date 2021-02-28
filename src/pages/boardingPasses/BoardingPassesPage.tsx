@@ -1,6 +1,63 @@
 import React, { ReactElement } from 'react';
 import Navbar from '../../components/navbar/Navbar';
+import PassportCard from '../../components/passportCard/PassportCard';
 import './BoardingPassesPage.scss';
+
+function generateDummyData() {
+    const passportProps = {
+        countryFrom: 'USA',
+        countryTo: 'AUS',
+        date: '01.01.21',
+        seat: 'PASSION',
+        title: 'DEVELOPING COUNTRY',
+        description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
+    };
+
+    const passportProps2 = {
+        countryFrom: 'USA',
+        countryTo: 'AUS',
+        date: '01.01.21',
+        seat: 'PASSION',
+        title: 'DEVELOPING COUNTRY',
+        description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
+    };
+
+    const passportProps3 = {
+        countryFrom: 'USA',
+        countryTo: 'AUS',
+        date: '01.01.21',
+        seat: 'PASSION',
+        title: 'DEVELOPING COUNTRY',
+        description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
+    };
+
+    const passportProps4 = {
+        countryFrom: 'USA',
+        countryTo: 'AUS',
+        date: '01.01.21',
+        seat: 'PASSION',
+        title: 'DEVELOPING COUNTRY',
+        description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
+    };
+
+    const passportProps5 = {
+        countryFrom: 'USA',
+        countryTo: 'AUS',
+        date: '01.01.21',
+        seat: 'PASSION',
+        title: 'DEVELOPING COUNTRY',
+        description: 'asdfi ajsdfoi jaweofija woeifj aoei fjao ewi fjs',
+        qrCodeValue: 'test',
+    };
+
+    return [passportProps, passportProps2, passportProps3, passportProps4, passportProps5];
+}
+
+const passportPropsList = generateDummyData();
 
 function BoardingPassesPage(): ReactElement {
     window.onbeforeunload = () => window.scrollTo(0, 0);
@@ -29,6 +86,13 @@ function BoardingPassesPage(): ReactElement {
                         <div className="BoardingPasses-filter-item">THEME</div>
                         <div className="BoardingPasses-filter-item">LOCATION</div>
                     </div>
+                </div>
+                <div className="BoardingPasses-page-passport-list-container">
+                    {passportPropsList.map((passportProps, i) => (
+                        <div className="BoardingPasses-page-passport-item" key={i}>
+                            <PassportCard {...passportProps} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
