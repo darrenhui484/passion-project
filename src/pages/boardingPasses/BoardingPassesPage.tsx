@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import PassportCard from '../../components/passportCard/PassportCard';
+import { PassportCardFilter } from '../../components/passportCardFilter/PassportCardFilter';
 import './BoardingPassesPage.scss';
 
 function generateDummyData() {
@@ -81,18 +82,8 @@ function BoardingPassesPage(): ReactElement {
                         </div>
                     </div>
                     <div className="BoardingPasses-filter-container">
-                        <div className="BoardingPasses-filter-item">FILTER BY:</div>
-                        <div className="BoardingPasses-filter-item">LATEST</div>
-                        <div className="BoardingPasses-filter-item">THEME</div>
-                        <div className="BoardingPasses-filter-item">LOCATION</div>
+                        <PassportCardFilter passportPropsList={passportPropsList} />
                     </div>
-                </div>
-                <div className="BoardingPasses-page-passport-list-container">
-                    {passportPropsList.map((passportProps, i) => (
-                        <div className="BoardingPasses-page-passport-item" key={i}>
-                            <PassportCard {...passportProps} />
-                        </div>
-                    ))}
                 </div>
             </div>
         </div>

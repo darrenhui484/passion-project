@@ -39,17 +39,3 @@ $large-header-font-size: 117px;
     font-size: $large-header-font-size;
     line-height: 0.9;
 }
-
-.BoardingPasses-filter-container {
-    align-items: center;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-    padding: 0 24px;
-}
-
-.BoardingPasses-filter-item {
-    font-size: 20px;
-}
