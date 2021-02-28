@@ -10,17 +10,24 @@
 
 .PassportCardFilter-filter-item {
     font-size: 20px;
+    padding: 8px;
+}
+
+.PassportCardFilter-filter-filterable-item:hover {
+    background-color: #666;
+    cursor: pointer;
 }
 
 .PassportCardFilter-card-container {
     $side-padding-size: 48px;
 
+    background-color: #faf2e9;
     display: grid;
     column-gap: 24px;
     grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
     left: 0;
     margin-top: 58px;
-    padding: 0 $side-padding-size;
+    padding: 0 $side-padding-size 96px;
     position: absolute;
     row-gap: 48px;
     width: calc(100% - 2 * #{$side-padding-size});

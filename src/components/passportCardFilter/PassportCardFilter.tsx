@@ -25,9 +25,15 @@ export class PassportCardFilter extends Component<PassportCardFilterProps, Passp
             <div className="PassportCardFilter">
                 <div className="PassportCardFilter-filter-container">
                     <div className="PassportCardFilter-filter-item">FILTER BY:</div>
-                    <div className="PassportCardFilter-filter-item">LATEST</div>
-                    <div className="PassportCardFilter-filter-item">THEME</div>
-                    <div className="PassportCardFilter-filter-item">LOCATION</div>
+                    <div className="PassportCardFilter-filter-item PassportCardFilter-filter-filterable-item">
+                        LATEST
+                    </div>
+                    <div className="PassportCardFilter-filter-item PassportCardFilter-filter-filterable-item">
+                        THEME
+                    </div>
+                    <div className="PassportCardFilter-filter-item PassportCardFilter-filter-filterable-item">
+                        LOCATION
+                    </div>
                 </div>
                 <div className="PassportCardFilter-card-container">
                     {this.state.filteredPassportCardProps.map((passportProps, i) => (
