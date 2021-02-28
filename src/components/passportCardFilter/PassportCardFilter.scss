@@ -8,6 +8,20 @@
     padding: 0 24px;
 }
 
-.PassportCardsFilter-filter-item {
+.PassportCardFilter-filter-item {
     font-size: 20px;
+}
+
+.PassportCardFilter-card-container {
+    $side-padding-size: 48px;
+
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+    left: 0;
+    margin-top: 58px;
+    padding: 0 $side-padding-size;
+    position: absolute;
+    row-gap: 48px;
+    width: calc(100% - 2 * #{$side-padding-size});
 }
