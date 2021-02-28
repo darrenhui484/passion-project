@@ -2,6 +2,7 @@ import { ReactElement, useState } from 'react';
 import './SurveyFormPage.scss';
 import SurveyScale from '../../../components/surveyScale/SurveyScale';
 import SurveyNavMenu from '../../../components/surveyNavMenu/SurveyNavMenu';
+import SurveyQuestionSlider from '../../../components/surveyQuestionSlider/SurveyQuestionSlider';
 
 function SurveyFormPage(): ReactElement {
     const [questionIndex, setQuestionIndex] = useState(0);
@@ -41,7 +42,9 @@ function SurveyFormPage(): ReactElement {
                     onClickForwardHandler={onClickForwardHandler}
                 />
                 <div className="Survey-form-page-input-container">input</div>
-                <div className="Survey-form-page-progress-container">progress</div>
+                <div className="Survey-form-page-progress-container font-aktiv-grotesk">
+                    <SurveyQuestionSlider />
+                </div>
             </div>
         </div>
     );
