@@ -1,4 +1,4 @@
-.PassportCardFilter-filter-items-container {
+.Filter-filter-items-container {
     align-items: center;
     border-bottom: 2px solid black;
     border-top: 2px solid black;
@@ -7,7 +7,7 @@
     justify-content: space-between;
 }
 
-.PassportCardFilter-filter-item-container {
+.Filter-filter-item-container {
     display: flex;
     font-size: 20px;
     justify-content: space-between;
@@ -15,15 +15,15 @@
     width: 100%;
 }
 
-.PassportCardFilter-filter-item-container:last-child {
+.Filter-filter-item-container:last-child {
     border-left: 1px solid black;
 }
 
-.PassportCardFilter-filter-item-container:hover {
+.Filter-filter-item-container:hover {
     cursor: pointer;
 }
 
-.PassportCardFilter-filter-item-icon {
+.Filter-filter-item-icon {
     justify-content: flex-end;
     pointer-events: none;
     position: absolute;
@@ -34,30 +34,15 @@
     z-index: 1;
 }
 
-.PassportCardFilter-filter-item-icon.selected {
+.Filter-filter-item-icon.selected {
     transform: translateY(50%);
     top: 0;
 }
 
 /* Override the arrow component css */
-.PassportCardFilter-filter-item-icon .Arrow {
+.Filter-filter-item-icon .Arrow {
     stroke: black;
     stroke-width: 10px;
-}
-
-.PassportCardFilter-card-container {
-    $side-padding-size: 48px;
-
-    background-color: #faf2e9;
-    display: grid;
-    column-gap: 24px;
-    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
-    left: 0;
-    margin-top: 58px;
-    padding: 0 $side-padding-size 96px;
-    position: absolute;
-    row-gap: 48px;
-    width: calc(100% - 2 * #{$side-padding-size});
 }
 
 /**
@@ -92,6 +77,8 @@
     width: 100%;
     padding: 0 16px;
     background: #faf2e9;
+    font-family: 'aktiv-grotesk-std', sans-serif;
+    font-weight: bold;
     height: 50px;
     outline: none;
     font-size: 20px;
@@ -100,7 +87,7 @@
 }
 
 .select-search__input:hover {
-    cusor: pointer;
+    cursor: pointer;
 }
 
 .select-search__input::placeholder {
@@ -151,7 +138,9 @@
     background: #faf2e9;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-family: 'aktiv-grotesk-std', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
     text-align: left;
     cursor: pointer;
 }
