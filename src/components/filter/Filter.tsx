@@ -2,15 +2,11 @@ import { Component, ReactElement } from 'react';
 import Arrow from '../arrow/Arrow';
 import SelectSearch, { fuzzySearch, SelectSearchOption } from 'react-select-search';
 import './Filter.scss';
+import { IFilterSelectOptions } from './IFilterSelectOptions';
 
 interface FilterProps {
-    options: FilterSelectOptions[];
+    options: IFilterSelectOptions[];
     onChange?: (title: string, value: string) => void;
-}
-
-interface FilterSelectOptions {
-    title: string;
-    options: SelectSearchOption[];
 }
 
 export class Filter extends Component<FilterProps> {

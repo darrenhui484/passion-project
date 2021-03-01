@@ -1,0 +1,33 @@
+$header-content-width: 705px;
+$large-header-font-size: 117px;
+
+.Filterable-template-content-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.Filterable-template-header-container {
+    margin-top: 104px;
+    width: $header-content-width;
+}
+
+.Filterable-template-title-boarding-text {
+    font-size: $large-header-font-size;
+    line-height: 0.9;
+}
+
+.Filterable-template-title-bottom-container {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.Filterable-template-title-bottom-left-section {
+    font-size: 18px;
+}
+
+.Filterable-template-title-bottom-right-section {
+    font-size: $large-header-font-size;
+    line-height: 0.9;
+}
