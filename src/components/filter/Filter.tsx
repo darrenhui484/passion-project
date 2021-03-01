@@ -46,7 +46,6 @@ export class Filter extends Component<FilterProps> {
     }
 
     filterValueChange(title: string, value: SelectSearchOption | SelectSearchOption[]): void {
-        console.log(title, value);
         if (this.props.onChange) {
             this.props.onChange(title, value.toString());
         }

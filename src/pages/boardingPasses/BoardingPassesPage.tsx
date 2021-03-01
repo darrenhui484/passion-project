@@ -28,7 +28,7 @@ function generateDummyData() {
         countryTo: 'AUS',
         date: '01.01.21',
         seat: 'PASSION',
-        title: 'DEVELOPING COUNTRY',
+        title: 'SAFE SPACE',
         description:
             'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,',
         qrCodeValue: 'test',
@@ -39,7 +39,7 @@ function generateDummyData() {
         countryTo: 'AUS',
         date: '01.01.21',
         seat: 'PASSION',
-        title: 'SUSTAINABILITY',
+        title: 'EDUCATION',
         description:
             'quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?',
         qrCodeValue: 'test',
@@ -77,13 +77,44 @@ interface BoardingPassPageState {
 }
 
 export default class BoardingPassPage extends Component<Record<string, never>, BoardingPassPageState> {
+    private readonly passportPropsList: IPassportCardProps[];
+    private filteredTheme: string;
+    private filteredLocation: string;
+
     constructor(props: Record<string, never>) {
         super(props);
+
+        this.passportPropsList = passportPropsList;
+        this.filteredTheme = Filter.NO_FILTER;
+        this.filteredLocation = Filter.NO_FILTER;
+
         this.state = { filteredPassportCardProps: passportPropsList };
     }
 
     filterItemChanged(title: string, value: string): void {
-        console.log('from boarding passes page', title, value);
+        if (title === THEME_TITLE) {
+            this.filteredTheme = value;
+        } else if (title === LOCATION_TITLE) {
+            this.filteredLocation = value;
+        }
+        this.updatePassportCards();
+    }
+
+    updatePassportCards(): void {
+        const filteredPassportProps = this.passportPropsList.filter((passportCardProp) => {
+            if (this.filteredTheme !== Filter.NO_FILTER && passportCardProp.title !== this.filteredTheme) {
+                return false;
+            }
+            if (
+                this.filteredLocation !== Filter.NO_FILTER &&
+                passportCardProp.countryFrom !== this.filteredLocation &&
+                passportCardProp.countryTo !== this.filteredLocation
+            ) {
+                return false;
+            }
+            return true;
+        });
+        this.setState({ filteredPassportCardProps: filteredPassportProps });
     }
 
     render(): ReactElement {
