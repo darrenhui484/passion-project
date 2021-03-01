@@ -1,8 +1,6 @@
-import React, { Component, ReactElement } from 'react';
+import { Component, ReactElement } from 'react';
 import { Filter } from '../../components/filter/Filter';
-import { createSearchSelectOptions } from '../../components/filter/helpers';
 import { IFilterSelectOptions } from '../../components/filter/IFilterSelectOptions';
-import Navbar from '../../components/navbar/Navbar';
 import './FilterableTemplate.scss';
 
 interface FilterableTemplateProps {
