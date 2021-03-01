@@ -2,6 +2,8 @@ import { ReactElement } from 'react';
 import BoardingPass from '../../components/boardingPass/BoardingPass';
 import { IBoardingPassProps } from '../../components/boardingPass/IBoardingPassProps';
 import { IPassportCardProps } from '../../components/passportCard/IPassportCardProps';
+import { IStoryCardProps } from '../../components/storyCard/IStoryCardProps';
+import StoryCard from '../../components/storyCard/StoryCard';
 import './TestPage.scss';
 
 const passportCardProps: IPassportCardProps = {
@@ -32,10 +34,18 @@ const boardingPassProps: IBoardingPassProps = {
     currentQuestionNumber: 0,
 };
 
+const storyCardProps: IStoryCardProps = {
+    title: 'BODY CONFIDENCE',
+    author: 'Olivia Rush',
+    imageUrl:
+        'https://www.thesprucepets.com/thmb/UCGjJ5v6HgPJJ7OOtS5J3ijUBZ8=/1080x1350/filters:fill(auto,1)/35493166_2113126082300521_5592447779063463936_n-5b69b61946e0fb002562c234.jpg',
+};
+
 function TestPage(): ReactElement {
     return (
         <div className="Test-page">
             <BoardingPass {...boardingPassProps} />
+            <StoryCard {...storyCardProps} />
         </div>
     );
 }

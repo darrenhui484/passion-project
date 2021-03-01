@@ -11,7 +11,7 @@ function App(): ReactElement {
     return (
         <ParallaxProvider>
             <div className="App">
-                <Route exact path="/" component={BoardingPassesPage}></Route>
+                <Route exact path="/" component={TestPage}></Route>
                 <Route path="/survey" component={SurveyPage}></Route>
                 <Route path="/boarding-passes" component={BoardingPassesPage}></Route>
             </div>
