@@ -1,19 +1,17 @@
 import React, { Component, ReactElement } from 'react';
 import { Filter } from '../../components/filter/Filter';
-import { createSearchSelectOptions } from '../../components/filter/helpers';
 import Navbar from '../../components/navbar/Navbar';
 import { IPassportCardProps } from '../../components/passportCard/IPassportCardProps';
 import PassportCard from '../../components/passportCard/PassportCard';
 import FilterableTemplate from '../filterableTemplate/FilterableTemplate';
 import './BoardingPassesPage.scss';
+import { FILTER_OPTIONS, LOCATION_TITLE, THEME_TITLE } from './FilterOptions';
 
-const THEME_LIST = ['SUSTAINABILITY', 'DEVELOPING COUNTRY', 'SAFE SPACE', 'EDUCATION'];
-const LOCATION_LIST = ['Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 'Angola', 'USA'];
-const THEME_TITLE = 'THEME';
-const LOCATION_TITLE = 'LOCATION';
-const TITLE_TOP = 'BOARDING';
-const TITLE_BOTTOM = 'PASSES';
-const SUBTEXT = 'Us, dreamers stand together. We inspire one another and follow the beat of our own heart.';
+const FILTERABLE_PAGE_PROPS = {
+    titleTop: 'BOARDING',
+    titleBottom: 'PASSES',
+    subtext: 'Us, dreamers stand together. We inspire one another and follow the beat of our own heart.',
+};
 
 function generateDummyData() {
     const passportProps = {
@@ -123,21 +121,13 @@ export default class BoardingPassPage extends Component<Record<string, never>, B
 
     render(): ReactElement {
         window.onbeforeunload = () => window.scrollTo(0, 0);
-        const themeOptions = createSearchSelectOptions(THEME_TITLE, THEME_LIST);
-        const locationOptions = createSearchSelectOptions(LOCATION_TITLE, LOCATION_LIST);
-        const filterOptions = [
-            { title: THEME_TITLE, options: themeOptions },
-            { title: LOCATION_TITLE, options: locationOptions },
-        ];
 
         return (
             <div className="BoardingPasses-page font-aktiv-grotesk">
                 <Navbar />
                 <FilterableTemplate
-                    titleTop={TITLE_TOP}
-                    titleBottom={TITLE_BOTTOM}
-                    subtext={SUBTEXT}
-                    filterOptions={filterOptions}
+                    {...FILTERABLE_PAGE_PROPS}
+                    filterOptions={FILTER_OPTIONS}
                     onFilterChange={this.filterItemChanged.bind(this)}
                 />
                 <div className="BoardingPasses-page-card-container">
