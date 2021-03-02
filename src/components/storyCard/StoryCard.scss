@@ -13,6 +13,7 @@ $card-width: 390px;
     width: $card-width;
 }
 
+/* If we want to stretch the image, we just change width here to match $card-width */
 .Story-card-image {
     max-height: 100%;
     max-width: 100%;

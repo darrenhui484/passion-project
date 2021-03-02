@@ -16,7 +16,7 @@ export default class StoryCard extends Component<IStoryCardProps> {
                 <div className="Story-card-divider"></div>
                 <div className="Story-card-bottom-section">
                     <div className="Story-card-title">{this.props.title}</div>
-                    <div className="Story-card-author">{this.props.author}</div>
+                    <div className="Story-card-author">With {this.props.author}</div>
                 </div>
             </div>
         );

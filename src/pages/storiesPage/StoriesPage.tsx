@@ -3,8 +3,9 @@ import { Filter } from '../../components/filter/Filter';
 import { IFilterSelectOptions } from '../../components/filter/IFilterSelectOptions';
 import Navbar from '../../components/navbar/Navbar';
 import { IStoryCardProps } from '../../components/storyCard/IStoryCardProps';
+import StoryCard from '../../components/storyCard/StoryCard';
 import FilterableTemplate from '../filterableTemplate/FilterableTemplate';
-import { generateFilterSelectOptions } from './FilterOptions';
+import { generateFilterSelectOptions, LATEST_TITLE, SPEAKER_TITLE, TOPIC_TITLE } from './FilterOptions';
 import './StoriesPage.scss';
 
 const FILTERABLE_PAGE_PROPS = {
@@ -27,15 +28,16 @@ const cardTwo: IStoryCardProps = {
         'https://www.thesprucepets.com/thmb/UCGjJ5v6HgPJJ7OOtS5J3ijUBZ8=/1080x1350/filters:fill(auto,1)/35493166_2113126082300521_5592447779063463936_n-5b69b61946e0fb002562c234.jpg',
 };
 
-const storyPropsList = [cardOne, cardTwo];
+const storyPropsList = [cardOne, cardTwo, cardOne, cardTwo];
 
 interface StoriesPageState {
     filteredStoryCards: IStoryCardProps[];
 }
 
 export default class StoriesPage extends Component<Record<string, never>, StoriesPageState> {
+    // TODO: Maybe think about storing this sorted by date already
     private readonly storyPropsList: IStoryCardProps[];
-    private filteredLatest: string;
+    private filteredLatest: boolean;
     private filteredTopic: string;
     private filteredSpeaker: string;
     private filterOptions: IFilterSelectOptions[];
@@ -44,7 +46,7 @@ export default class StoriesPage extends Component<Record<string, never>, Storie
         super(props);
 
         this.storyPropsList = storyPropsList;
-        this.filteredLatest = Filter.NO_FILTER;
+        this.filteredLatest = true;
         this.filteredTopic = Filter.NO_FILTER;
         this.filteredSpeaker = Filter.NO_FILTER;
         this.filterOptions = generateFilterSelectOptions(storyPropsList);
@@ -53,12 +55,35 @@ export default class StoriesPage extends Component<Record<string, never>, Storie
     }
 
     filterItemChanged(item: string, value: string): void {
-        console.log(item, value);
+        switch (item) {
+            case LATEST_TITLE:
+                this.filteredLatest = value === Filter.NO_FILTER;
+                break;
+            case TOPIC_TITLE:
+                this.filteredTopic = value;
+                break;
+            case SPEAKER_TITLE:
+                this.filteredSpeaker = value;
+                break;
+            default:
+                console.error('Unknown filter item changed, this should never  happen', item, value);
+                break;
+        }
         this.updateStoryCards();
     }
 
     updateStoryCards(): void {
-        console.log('update me!');
+        const filteredStoryCards = this.storyPropsList.filter((storyCardProp) => {
+            if (
+                (this.filteredSpeaker !== Filter.NO_FILTER &&
+                    storyCardProp.author.toUpperCase() !== this.filteredSpeaker) ||
+                (this.filteredTopic !== Filter.NO_FILTER && storyCardProp.title.toUpperCase() !== this.filteredTopic)
+            ) {
+                return false;
+            }
+            return true;
+        });
+        this.setState({ filteredStoryCards });
     }
 
     render(): ReactElement {
@@ -73,11 +98,11 @@ export default class StoriesPage extends Component<Record<string, never>, Storie
                     onFilterChange={this.filterItemChanged.bind(this)}
                 />
                 <div className="Story-page-card-container">
-                    {/* {this.state.filteredPassportCardProps.map((passportProps, i) => (
-                        <div className="BoardingPasses-page-passport-item" key={i}>
-                            <PassportCard {...passportProps} />
+                    {this.state.filteredStoryCards.map((storyCardProps, i) => (
+                        <div className="Story-page-card-item" key={i}>
+                            <StoryCard {...storyCardProps} />
                         </div>
-                    ))} */}
+                    ))}
                 </div>
             </div>
         );
