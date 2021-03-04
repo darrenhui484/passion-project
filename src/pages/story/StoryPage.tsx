@@ -157,6 +157,9 @@ export default class StoryPage extends Component<IStoryPageProps, IStoryPageStat
                         </div>
                     </div>
                 </div>
+                <div className="Story-page-footer font-saol-display">
+                    <i>Dreaming</i> is the first step to <i>believing</i>
+                </div>
             </div>
         );
     }
