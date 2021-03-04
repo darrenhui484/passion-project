@@ -6,7 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import SurveyPage from './pages/survey-pages/survey-page/SurveyPage';
 import TestPage from './pages/test-page/TestPage';
 import BoardingPassesPage from './pages/boardingPasses/BoardingPassesPage';
-import StoriesPage from './pages/storiesPage/StoriesPage';
+import StoriesPage from './pages/stories-list/StoriesPage';
 
 function App(): ReactElement {
     return (
