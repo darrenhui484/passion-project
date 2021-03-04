@@ -92,16 +92,16 @@ export default class StoriesPage extends Component<Record<string, never>, Storie
         window.onbeforeunload = () => window.scrollTo(0, 0);
 
         return (
-            <div className="Story-page font-aktiv-grotesk">
+            <div className="Stories-page font-aktiv-grotesk">
                 <Navbar />
                 <FilterableTemplate
                     {...FILTERABLE_PAGE_PROPS}
                     filterOptions={this.filterOptions}
                     onFilterChange={this.filterItemChanged.bind(this)}
                 />
-                <div className="Story-page-card-container">
+                <div className="Stories-page-card-container">
                     {this.state.filteredStoryCards.map((storyCardProps, i) => (
-                        <div className="Story-page-card-item" key={i}>
+                        <div className="Stories-page-card-item" key={i}>
                             <StoryCard {...storyCardProps} />
                         </div>
                     ))}
