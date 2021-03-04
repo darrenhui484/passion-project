@@ -7,6 +7,7 @@ import SurveyPage from './pages/survey-pages/survey-page/SurveyPage';
 import BoardingPassesPage from './pages/boardingPasses/BoardingPassesPage';
 import StoriesPage from './pages/stories-list/StoriesPage';
 import StoryPage from './pages/story/StoryPage';
+import TestPage from './pages/test-page/TestPage';
 
 function App(): ReactElement {
     return (
@@ -17,6 +18,7 @@ function App(): ReactElement {
                 <Route path="/boarding-passes" component={BoardingPassesPage}></Route>
                 <Route path="/stories" component={StoriesPage}></Route>
                 <Route path="/story/:storyId" component={StoryPage}></Route>
+                <Route path="/test" component={TestPage}></Route>
             </div>
         </ParallaxProvider>
     );

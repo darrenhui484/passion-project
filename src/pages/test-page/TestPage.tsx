@@ -2,8 +2,11 @@ import { ReactElement } from 'react';
 import BoardingPass from '../../components/boardingPass/BoardingPass';
 import { IBoardingPassProps } from '../../components/boardingPass/IBoardingPassProps';
 import { IPassportCardProps } from '../../components/passportCard/IPassportCardProps';
+import PassportCard from '../../components/passportCard/PassportCard';
 import { IStoryCardProps } from '../../components/storyCard/IStoryCardProps';
 import StoryCard from '../../components/storyCard/StoryCard';
+import { IStoryCardCarouselProps } from '../../components/storyCardCarousel/IStoryCardCarouselProps';
+import StoryCardCarousel from '../../components/storyCardCarousel/StoryCardCarousel';
 import './TestPage.scss';
 
 const passportCardProps: IPassportCardProps = {
@@ -42,9 +45,14 @@ const storyCardProps: IStoryCardProps = {
     storyId: 'test1',
 };
 
+const storyCardCarouselProps: IStoryCardCarouselProps = {
+    storyCards: [storyCardProps, storyCardProps, storyCardProps],
+};
+
 function TestPage(): ReactElement {
     return (
         <div className="Test-page">
+            <StoryCardCarousel {...storyCardCarouselProps} />
             <BoardingPass {...boardingPassProps} />
             <StoryCard {...storyCardProps} />
         </div>
