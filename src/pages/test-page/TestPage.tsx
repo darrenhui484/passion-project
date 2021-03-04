@@ -39,6 +39,7 @@ const storyCardProps: IStoryCardProps = {
     author: 'Olivia Rush',
     imageUrl:
         'https://www.thesprucepets.com/thmb/UCGjJ5v6HgPJJ7OOtS5J3ijUBZ8=/1080x1350/filters:fill(auto,1)/35493166_2113126082300521_5592447779063463936_n-5b69b61946e0fb002562c234.jpg',
+    storyId: 'test1',
 };
 
 function TestPage(): ReactElement {
