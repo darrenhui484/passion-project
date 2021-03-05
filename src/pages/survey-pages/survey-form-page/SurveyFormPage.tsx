@@ -41,7 +41,9 @@ function SurveyFormPage(): ReactElement {
                     onClickBackHandler={onClickBackHandler}
                     onClickForwardHandler={onClickForwardHandler}
                 />
-                <div className="Survey-form-page-input-container">input</div>
+                <div className="Survey-form-page-input-container">
+                    <input />
+                </div>
                 <div className="Survey-form-page-progress-container font-aktiv-grotesk">
                     <SurveyQuestionSlider />
                 </div>

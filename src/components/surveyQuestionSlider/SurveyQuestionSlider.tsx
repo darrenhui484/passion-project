@@ -1,4 +1,5 @@
 import { CSSProperties, ReactElement, useState } from 'react';
+import SurveyQuestionBubble from '../surveyQuestionBubble/SurveyQuestionBubble';
 import './SurveyQuestionSlider.scss';
 
 function SurveyQuestionSlider(): ReactElement {
@@ -34,29 +35,44 @@ function SurveyQuestionSlider(): ReactElement {
         return tickStyle;
     }
 
+    function generateQuestionBubbleStyle(i: number): CSSProperties {
+        const questionBubbleStyle: CSSProperties = {
+            position: 'absolute',
+            // width: '50px',
+            top: '0px',
+            right: '0px',
+        };
+        return questionBubbleStyle;
+    }
+
     return (
         <div className="Survey-question-slider">
-            <div className="Survey-question-slider-numbers">
-                {[...Array(numberOfQuestions + 1)].map((e, i) => {
-                    if (i != 0) {
-                        return (
-                            <>
-                                <div className="Survey-question-slider-tick" style={generateTickStyle(i)} />
-                                <div style={generateQuestionStyle(i)} key={i}>
-                                    0{i}
-                                </div>
-                            </>
-                        );
-                    } else {
-                        return <></>;
-                    }
-                })}
+            <div style={generateQuestionBubbleStyle(questionIndex)}>
+                <SurveyQuestionBubble />
             </div>
-            <svg height="471" width="80">
-                <line x1="0" y1={heightEnd} x2="80" y2={heightEnd} />
-                <line x1={verticalLineXPosition} y1={heightStart} x2={verticalLineXPosition} y2={heightEnd} />
-                <line x1="0" y1={heightStart} x2="80" y2={heightStart} />
-            </svg>
+            <div>
+                <div className="Survey-question-slider-numbers">
+                    {[...Array(numberOfQuestions + 1)].map((e, i) => {
+                        if (i != 0) {
+                            return (
+                                <>
+                                    <div className="Survey-question-slider-tick" style={generateTickStyle(i)} />
+                                    <div style={generateQuestionStyle(i)} key={i}>
+                                        0{i}
+                                    </div>
+                                </>
+                            );
+                        } else {
+                            return <></>;
+                        }
+                    })}
+                </div>
+                <svg height="471" width="80">
+                    <line x1="0" y1={heightEnd} x2="80" y2={heightEnd} />
+                    <line x1={verticalLineXPosition} y1={heightStart} x2={verticalLineXPosition} y2={heightEnd} />
+                    <line x1="0" y1={heightStart} x2="80" y2={heightStart} />
+                </svg>
+            </div>
         </div>
     );
 }
