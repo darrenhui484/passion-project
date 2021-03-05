@@ -1,0 +1,21 @@
+$background-color: #faf2e9;
+
+.Stories-page {
+    background-color: $background-color;
+    height: 100vh;
+}
+
+.Stories-page-card-container {
+    $side-padding-size: 48px;
+
+    background-color: $background-color;
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    left: 0;
+    margin-top: 58px;
+    padding: 0 $side-padding-size 96px;
+    position: absolute;
+    row-gap: 48px;
+    width: calc(100% - 2 * #{$side-padding-size});
+}

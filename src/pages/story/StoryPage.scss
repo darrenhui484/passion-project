@@ -1,0 +1,216 @@
+$background-color: #faf2e9;
+$content-right-margin: 170px;
+
+.Story-page {
+    background-color: $background-color;
+    height: 100%;
+}
+
+.Story-page-title-container {
+    column-gap: 42px;
+    display: flex;
+    margin-top: 112px;
+    padding: 0 72px;
+}
+
+.Story-page-title-left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.Story-page-title-text {
+    font-size: 117px;
+    font-weight: 600;
+    line-height: calc(117 / 124);
+}
+
+.Story-page-title-left-bottom-section {
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.Story-page-title-left-bottom-right-section {
+    display: flex;
+}
+
+.Story-page-title-left-bottom-section-play-button {
+    border-radius: 50%;
+    border: 3px solid black;
+    flex-shrink: 0;
+    height: 255px;
+    width: 255px;
+}
+
+.Story-page-title-details-container {
+    font-weight: 500;
+}
+
+.Story-page-title-details-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Story-page-title-details-socials {
+    width: 100%;
+}
+
+.Story-page-title-details-socials-item {
+}
+
+.Story-page-title-details-social-title {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.Story-page-title-details-social-description {
+    font-size: 14px;
+}
+
+.Story-page-title-details-mission {
+    width: 100%;
+}
+
+.Story-page-title-details-author {
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.Story-page-title-right-section {
+}
+
+.Story-page-title-image {
+    object-fit: contain;
+    max-height: 979px;
+    max-width: 100%;
+}
+
+.Story-page-images {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Story-page-image-two {
+    height: 717px;
+    margin-right: 201px;
+    object-fit: cover;
+    width: 1062px;
+}
+
+.Story-page-image-three {
+    height: 551px;
+    margin-top: 551px;
+    width: 510px;
+}
+
+.Story-page-text-content-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 255px;
+    margin-right: $content-right-margin;
+}
+
+.Story-page-dummy-right-div {
+    flex: 1;
+}
+
+.Story-page-text-content-header {
+    display: flex;
+}
+
+.Story-page-content-header {
+    flex: 1;
+    font-size: 39px;
+    font-weight: 500;
+}
+
+.Story-page-content-inner-container {
+    display: flex;
+}
+
+.Story-page-content-images-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Story-page-image-four {
+    height: 421px;
+    margin-left: 72px;
+    width: 601px;
+}
+
+.Story-page-image-five {
+    height: 861px;
+    margin-top: 320px;
+    width: 573px;
+}
+
+.Story-page-content-text-container {
+    flex: 1;
+}
+
+.Story-page-content-content {
+    font-size: 20px;
+}
+
+.Story-page-content-content-container {
+    margin: 110px 0;
+}
+
+.Story-page-socials-container {
+    border-top: 2px solid black;
+}
+
+.Story-page-socials-item {
+    align-items: center;
+    display: flex;
+    height: 48px;
+    padding: 0 16px;
+    justify-content: space-between;
+}
+
+.Story-page-socials-item {
+    border-bottom: 2px solid black;
+}
+
+.Story-page-socials-name {
+    font-size: 21px;
+}
+
+/** Override the Arrow css */
+.Story-page-socials-arrow .Arrow {
+    height: 21px;
+    stroke: black;
+    transform: rotate(90deg);
+    width: 21px;
+}
+
+.Story-page-content-full-conversation {
+    align-items: center;
+    column-gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 80px;
+    font-weight: 600;
+    margin-top: 52px;
+}
+
+.Story-page-content-full-conversation-pill-wrapper {
+    font-size: 21px;
+}
+
+.Story-page-content-full-conversation-pill {
+    border: 2px solid black;
+    border-radius: 33px;
+    padding: 4px 16px;
+}
+
+.Story-page-footer {
+    font-size: 94px;
+    padding: 148px 20%;
+    text-align: center;
+}

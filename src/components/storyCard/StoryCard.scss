@@ -1,0 +1,37 @@
+$base-color: #faf2e9;
+$card-width: 390px;
+
+.Story-card {
+    background-color: $base-color;
+    width: $card-width;
+}
+
+.Story-card-image-container {
+    display: flex;
+    height: 450px;
+    justify-content: center;
+    width: $card-width;
+}
+
+/* If we want to stretch the image, we just change width here to match $card-width */
+.Story-card-image {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.Story-card-divider {
+    border-bottom: 3px solid black;
+    height: 100%;
+    margin-bottom: 11px;
+    margin-top: 32px;
+}
+
+.Story-card-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.Story-card-author {
+    font-size: 15px;
+}

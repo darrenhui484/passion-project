@@ -1,0 +1,53 @@
+$header-content-width: 705px;
+$large-header-font-size: 117px;
+
+.BoardingPasses-page {
+    background-color: #faf2e9;
+    height: 100vh;
+}
+
+.BoardingPasses-page-content-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.BoardingPasses-page-header-container {
+    margin-top: 104px;
+    width: $header-content-width;
+}
+
+.BoardingPasses-page-title-boarding-text {
+    font-size: $large-header-font-size;
+    line-height: 0.9;
+}
+
+.BoardingPasses-page-title-bottom-container {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.BoardingPasses-page-title-bottom-left-section {
+    font-size: 18px;
+}
+
+.BoardingPasses-page-title-bottom-right-section {
+    font-size: $large-header-font-size;
+    line-height: 0.9;
+}
+
+.BoardingPasses-page-card-container {
+    $side-padding-size: 48px;
+
+    background-color: #faf2e9;
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+    left: 0;
+    margin-top: 58px;
+    padding: 0 $side-padding-size 96px;
+    position: absolute;
+    row-gap: 48px;
+    width: calc(100% - 2 * #{$side-padding-size});
+}
