@@ -1,0 +1,61 @@
+$color: #fff7f0;
+
+.Survey-text-input {
+    margin-top: 100px;
+
+    textarea {
+        border: none;
+        color: $color;
+        width: 720px;
+        border-bottom: 1px solid $color;
+
+        background-color: transparent;
+
+        overflow: auto;
+        outline: none;
+
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+
+        resize: none; /*remove the resize handle on the bottom right*/
+    }
+
+    @keyframes icon-1 {
+        0% {
+        }
+        100% {
+            transform: translateX(300px);
+        }
+    }
+
+    .Survey-text-input-icon-one-container {
+        margin-top: -30px;
+        width: 150px;
+        animation: icon-1 5s linear infinite alternate;
+    }
+
+    @keyframes icon-2 {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .Survey-text-input-right-icons-container {
+        margin-top: -110px;
+        margin-left: 600px;
+        display: flex;
+        .Survey-text-input-icon-two-container {
+            width: 100px;
+            animation: icon-2 1s linear infinite alternate;
+        }
+
+        .Survey-text-input-icon-three-container {
+            margin-left: -50px;
+            width: 100px;
+        }
+    }
+}

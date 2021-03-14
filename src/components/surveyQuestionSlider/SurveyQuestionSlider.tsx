@@ -2,7 +2,11 @@ import { CSSProperties, ReactElement, useState } from 'react';
 import SurveyQuestionBubble from '../surveyQuestionBubble/SurveyQuestionBubble';
 import './SurveyQuestionSlider.scss';
 
-function SurveyQuestionSlider(): ReactElement {
+interface ISurveyQuestionSliderProps {
+    questionIndex: number;
+}
+
+function SurveyQuestionSlider({ questionIndex }: ISurveyQuestionSliderProps): ReactElement {
     const heightStart = 1;
     const heightEnd = 469;
     const height = heightEnd - heightStart;
@@ -10,8 +14,6 @@ function SurveyQuestionSlider(): ReactElement {
     const tickLength = 25;
 
     const numberOfQuestions = 6;
-
-    const [questionIndex, setQuestionIndex] = useState(0);
 
     function generateQuestionStyle(i: number): CSSProperties {
         const offset = -9;
@@ -38,9 +40,9 @@ function SurveyQuestionSlider(): ReactElement {
     function generateQuestionBubbleStyle(i: number): CSSProperties {
         const questionBubbleStyle: CSSProperties = {
             position: 'absolute',
-            // width: '50px',
-            top: '0px',
-            right: '0px',
+            width: '75px',
+            top: i * (heightStart + height / (numberOfQuestions + 1)) + 34 + 'px',
+            left: '60px',
         };
         return questionBubbleStyle;
     }

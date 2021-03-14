@@ -106,15 +106,15 @@ export default class BoardingPassPage extends Component<Record<string, never>, B
         const filteredPassportProps = this.passportPropsList.filter((passportCardProp) => {
             if (this.filteredTheme !== Filter.NO_FILTER && passportCardProp.title !== this.filteredTheme) {
                 return false;
-            }
-            if (
+            } else if (
                 this.filteredLocation !== Filter.NO_FILTER &&
                 passportCardProp.countryFrom !== this.filteredLocation &&
                 passportCardProp.countryTo !== this.filteredLocation
             ) {
                 return false;
+            } else {
+                return true;
             }
-            return true;
         });
         this.setState({ filteredPassportCardProps: filteredPassportProps });
     }
@@ -129,6 +129,7 @@ export default class BoardingPassPage extends Component<Record<string, never>, B
                     {...FILTERABLE_PAGE_PROPS}
                     filterOptions={FILTER_OPTIONS}
                     onFilterChange={this.filterItemChanged.bind(this)}
+                    width="700px"
                 />
                 <div className="BoardingPasses-page-card-container">
                     {this.state.filteredPassportCardProps.map((passportProps, i) => (

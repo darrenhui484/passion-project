@@ -9,9 +9,9 @@ import { generateFilterSelectOptions, LATEST_TITLE, SPEAKER_TITLE, TOPIC_TITLE }
 import './StoriesPage.scss';
 
 const FILTERABLE_PAGE_PROPS = {
-    titleTop: 'BOARDING',
-    titleBottom: 'PASSES',
-    subtext: 'Us, dreamers stand together. We inspire one another and follow the beat of our own heart.',
+    titleTop: 'STORIES TO',
+    titleBottom: 'SHARE',
+    subtext: 'Looking for some motivation?\nBe inspired by our community \nand connect with the speakers',
 };
 
 const cardOne: IStoryCardProps = {
@@ -98,6 +98,7 @@ export default class StoriesPage extends Component<Record<string, never>, Storie
                     {...FILTERABLE_PAGE_PROPS}
                     filterOptions={this.filterOptions}
                     onFilterChange={this.filterItemChanged.bind(this)}
+                    width="655px"
                 />
                 <div className="Stories-page-card-container">
                     {this.state.filteredStoryCards.map((storyCardProps, i) => (

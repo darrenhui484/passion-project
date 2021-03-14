@@ -17,7 +17,7 @@ $background-color: #faf2e9;
     width: 100%;
 }
 
-.Filter-filter-item-container:last-child {
+.Filter-filter-item-container:not(:first-child) {
     border-left: 1px solid black;
 }
 
@@ -33,7 +33,7 @@ $background-color: #faf2e9;
     right: 8px;
     transform: rotate(180deg) translateY(50%);
     top: 50%;
-    width: 15px;
+    width: 20px;
     z-index: 1;
 }
 
@@ -45,7 +45,7 @@ $background-color: #faf2e9;
 /* Override the arrow component css */
 .Filter-filter-item-icon .Arrow {
     stroke: black;
-    stroke-width: 10px;
+    // stroke-width: 2px;
 }
 
 /**
@@ -81,7 +81,7 @@ $background-color: #faf2e9;
     padding: 0 16px;
     background: $background-color;
     font-family: 'aktiv-grotesk-std', sans-serif;
-    font-weight: bold;
+    font-weight: 100;
     height: 50px;
     outline: none;
     font-size: 20px;

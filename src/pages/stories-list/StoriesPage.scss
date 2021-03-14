@@ -1,8 +1,12 @@
 $background-color: #faf2e9;
+$grid-line-color: #e9e2d1;
 
 .Stories-page {
     background-color: $background-color;
     height: 100vh;
+    background-size: 500px 500px;
+    background-image: linear-gradient(to right, $grid-line-color 1px, transparent 1px),
+        linear-gradient(to bottom, $grid-line-color 1px, transparent 1px);
 }
 
 .Stories-page-card-container {
@@ -13,7 +17,7 @@ $background-color: #faf2e9;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
     left: 0;
-    margin-top: 58px;
+    margin-top: 150px;
     padding: 0 $side-padding-size 96px;
     position: absolute;
     row-gap: 48px;

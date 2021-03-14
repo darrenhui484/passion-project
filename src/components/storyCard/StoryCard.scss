@@ -4,6 +4,13 @@ $card-width: 390px;
 .Story-card {
     background-color: $base-color;
     width: $card-width;
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 .Story-card-image-container {
